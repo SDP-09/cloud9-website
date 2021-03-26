@@ -11,162 +11,66 @@ description: "This is meta description"
 draft: false
 ---
 
+### The full Cloud 9 cleaning system includes many parts, including:
 
-#### Heading example
+- An autonomous desk cleaning robot, named Clyde.
+- A navigation stack for moving the robot between desks and mapping an area.
+- A database that holds the locations of all tables, their sizes and colours.
+- An arm that is attached to Clyde that cleans the desk.
+- An accompanying app that facilitates desk booking.
 
-Here is example of hedings. You can use this heading by following markdownify rules. For example: use `#` for heading 1 and use `######` for heading 6.
+These parts come together to make an autonomous sanitising system for desk tops and other flat surfaces in spaces such as libraries.
 
-# Heading 1 
-<br>
+Below are more in-depth descriptions of each sub-system.
 
-## Heading 2 
+(include a uml sequence diagram here)
 
-<br>
+### The Mobile App:
 
-### Heading 3 
+When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
 
-<br>
+If the user chooses to check in a table, the table will be marked “occupied” as an indication of being used.
 
-#### Heading 4 
+If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
 
-<br>
+### The Database:
 
-##### Heading 5 
+The bookings database stores all the specific data on the desks, including location and status (i.e. occupied, clean, dirty). It's one of the core parts of our cleaning system. Both Clyde and users will access the database.
 
-<br>
+### Navigation:
 
-###### Heading 6
+The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment and his onboard Raspberry Pi computer to determine navigation routes - as seen in the photo to the right. (remove the photo if animation).
 
+- Clyde uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. The technician performs this mapping on set-up by driving Clyde around the environment. The animation … shows an example of the mapping in action.
 
-<hr>
+- Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
-##### Emphasis
+- All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying Clyde’s accompanying database that holds the positions of all tables and publishing this information using a ROS2 action client.
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+### Vision
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Clyde uses computer vision to perform two separate tasks. (preconditions before cleaning can be performed)
 
-Combined emphasis with **asterisks and _underscores_**.
+1. Scanning QR code on desk.  
+  When Clyde reaches the desired desk, it first finds the QR code on the desk and retrieves the desk number from the QR code, then checks if the desk number matches the desired one.
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+2. Detecting obstruction on desk.  
+  After the first checking is done, the robot will take a picture of the whole table and perform an obstruction detection algorithm using computer vision. This ensures the desk is empty before any cleaning is performed.
 
-<hr>
+Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 
-##### Link
-[I'm an inline-style link](https://www.google.com)
+### The Arm
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 (?) robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk, then carries out a series of movements to perform the sanitisation.
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+### The Cleaner
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+> The end of the arm is equipped with a custom...
 
-[You can use numbers for reference-style link definitions][1]
+### Methods:
 
-Or leave it empty and use the [link text itself].
+> “Explain the key methods of how you got your system to work”
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
+### System Diagrams:
 
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.themefisher.com
-[1]: https://gethugothemes.com
-[link text itself]: https://www.getjekyllthemes.com
-
-<hr>
-
-##### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
-<hr>
-
-##### Ordered List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
-<hr>
-
-##### Unordered List
-
-* List item
-* List item
-* List item
-* List item
-* List item
-
-<hr>
-
-##### Code and Syntax Highlighting
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-<hr>
-
-##### Blockquote
-
-> This is a blockquote example.
-
-<hr>
-
-##### Inline HTML
-
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
-
-<hr>
-
-##### Tables
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-<hr>
-
-##### Image
-
-![image](../../images/blog/post-6.jpg)
-
-<hr>
-
-##### Youtube video
-
-{{< youtube C0DPdy98e4c >}}
+> “You should include images (where available) which illustrate the methods you used, how the system works etc. This can include system diagrams, images of your system in certain states etc.”
