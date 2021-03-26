@@ -1,0 +1,114 @@
+####################### Banner #########################
+banner:
+  title : "Clean your desks with Clyde"
+  image : ""
+  content : "Clyde is an autonomous sanitation system for use in academic buildings and offices. The need for a product like this is especially clear during a pandemic but its usefulness extends far beyond that."
+  button:
+    enable : false
+    label : "Contact With Us"
+    link : "#"
+
+##################### Feature ##########################
+feature:
+  enable : true
+  title : "Key features"
+  feature_item:
+    # feature item loop
+    - name : "Increase safty"
+      icon : "ti-pulse"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+    # feature item loop
+    - name : "Decrease cost"
+      icon : "ti-package"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+    # feature item loop
+    - name : "Autonomous navigation"
+      icon : "ti-alarm-clock"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+    # feature item loop
+    - name : "Desk booking app"
+      icon : "ti-credit-card"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+    # feature item loop
+    - name : "QR code scanning"
+      icon : "ti-headphone-alt"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+    # feature item loop
+    - name : "Feature 6"
+      icon : "ti-cloud-up"
+      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      
+
+
+######################### Service #####################
+service:
+  enable : true
+  service_item:
+    # service item loop
+    - title : "Tagline about system"
+      images:
+      - "images/service-1.png"
+      - "images/service-2.png"
+      - "images/service-3.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+      button:
+        enable : true
+        label : "Learn more about the system"
+        link : "system"
+        
+    # service item loop
+    - title : "Tagline about how it works"
+      images:
+      - "images/service-1.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+      button:
+        enable : true
+        label : "Learn more about how it works"
+        link : "how-it-works"
+        
+    # service item loop
+    - title : "Tagline about evaluation"
+      images:
+      - "images/service-2.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+      button:
+        enable : true
+        label : "Learn more about our evaluation"
+        link : "evaluation"
+        
+    # service item loop
+    - title : "Tagline about budget"
+      images:
+      - "images/service-3.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+      button:
+        enable : true
+        label : "Learn more about our budget"
+        link : "budget"
+        
+################### Screenshot ########################
+screenshot:
+  enable : true
+  title : "We call ourselves Cloud 9"
+  button:
+    enable : true
+    label : "Meet the team"
+    link : "team"
+  image : "images/team.svg"
+  
+
+##################### Call to action #####################
+call_to_action:
+  enable : false
+  title : "Ready to get started?"
+  image : "images/cta.svg"
+  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur."
+  button:
+    enable : true
+    label : "Contact Us"
+    link : "contact"
