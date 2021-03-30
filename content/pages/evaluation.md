@@ -14,7 +14,7 @@ draft: false
 ClyDe contains several subsystems(Described in "System" and "How it works" sections). Each of these have been thourogly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Havign confirmed the reliability and functionality of each subsystem, we could more easily put them together and resolve errors quickly.The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. 
 
 
-##Navigation Quantitative Analysis
+## Navigation Quantitative Analysis
 
 | Table | Goal Pose            | Mean Achieved Pose    | Success |
 | ----- | -------------------- | --------------------- | ------- |
@@ -28,7 +28,7 @@ ClyDe contains several subsystems(Described in "System" and "How it works" secti
 | 8     | 1.8 -2.7 0.0 1.0     | 1.73 -2.64 0.05 0.91  | 3/5     |
 
 
-##Obstruction Detection
+## Obstruction Detection
 
 | **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. color** | **Table color** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
 | --------------------- | ----------------- | ------------ | ------------- | -------------- | --------------- | ----------------- | --------------------- | ----------- |
@@ -56,7 +56,7 @@ ClyDe contains several subsystems(Described in "System" and "How it works" secti
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | low                   | Success     |
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
-##QR Code detection
+## QR Code detection
 
 | Angle/degree | Distance/meter | Detected | Graph                                  |
 | ------------ | -------------- | -------- | -------------------------------------- |
