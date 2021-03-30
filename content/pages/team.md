@@ -22,10 +22,10 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/lars.jpg" class="member-image">
+	<img src="../media/Adel.jpg" class="member-image">
 	<div class="member-description">
-		<p class="member-name">Lars Thalian Morstad</p>
-		<p class="member-role">Hardware Team Leader</p>
+		<p class="member-name">Adel Sefiane</p>
+		<p class="member-role">Hardware, Arm Guy</p>
 	</div>
 </div>
 
