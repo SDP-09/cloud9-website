@@ -27,7 +27,6 @@ In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil wi
 ### **ClyDe Companion App**
 
 The main way users interact with CLYDE is through our ClyDe Companion app.
-
 #### Features ####
 
 Users are only concerned with two features from the app.
@@ -40,22 +39,8 @@ It is possible in the future to integrate the app with the booking system that a
 
 ### **ClyDe Controller**
 This serves as a controller for staff to interact will ClyDe in various ways, such as telling him to start patrolling as well as to come back home.
-
 #### Features ####
 
 Displays diagnostic info.
 
 Can give instructions to ClyDe.
-
-### **Map building with Cartographer**
-
-In CLYDE's setup phase, it builds a map of its work area, which will later be used for navigation. A techinican will remote-control the robot with simple controls, all the while using our software to easily mark down desk locations, make their QR codes and add the desks to our database.
-
-### **Autonomus navigation using the Navigation2 Stack**
-
-Using the map built in the setup phase, CLYDE can navigate complex spaces and move between desks as needed.
-Obstacle Avoidance
-
-### **QR Code Recognition**
-
-Obstruction Detection
