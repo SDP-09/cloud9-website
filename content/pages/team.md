@@ -46,7 +46,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/jeffrey.jpg" class="member-image">
+	<img src="../media/chris.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Jeffrey Zhang</p>
 		<p class="member-role">Hardware, Database, App Guy</p>
