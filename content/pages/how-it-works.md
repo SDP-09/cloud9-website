@@ -39,13 +39,17 @@ The bookings database stores all the specific data on the desks, including locat
 
 ### Navigation:
 
-The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment and his onboard Raspberry Pi computer to determine navigation routes - as seen in the photo to the right. (remove the photo if animation).
+The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo to the right. (remove the photo if animation).
 
-- Clyde uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. The technician performs this mapping on set-up by driving Clyde around the environment. The animation … shows an example of the mapping in action.
+
+![image](../media/swipe.png)
+
+
+- Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually. The animation … shows an example of the mapping in action.
 
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
-- All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying Clyde’s accompanying database that holds the positions of all tables and publishing this information using a ROS2 action client.
+- All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
 
 ### Vision
 
