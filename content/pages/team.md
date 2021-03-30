@@ -13,19 +13,6 @@ draft: false
 
 ## Meet the team!
 
-| Image                       | Name                 | Role                 |
-| --------------------------- | -------------------- | :------------------- |
-| ![image](../media/lars.jpg) | Lars Thalian Morstad | Hardware Team Leader |
-| ![image](../media/Adel.jpg) | Adel Sefiane         | centered             |
-| ![image](../media/lars.jpg) | Sean Strain          | are neat             |
-| ![image](../media/lars.jpg) | Janek Smialek        | are neat             |
-| ![image](../media/lars.jpg) | Ryan Schuller        | are neat             |
-| ![image](../media/lars.jpg) | Jeffrey              | are neat             |
-| ![image](../media/lars.jpg) | Ivan                 | are neat             |
-| ![image](../media/lars.jpg) | Shining              | are neat             |
-
-## Meet the team!
-
 <div class="team-member">
 	<img src="../media/lars.jpg" class="member-image">
 	<div class="member-description">
