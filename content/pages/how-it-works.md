@@ -35,7 +35,8 @@ If the user chooses to check out a table, the table will be marked “dirty” a
 
 ### The Database:
 
-The bookings database stores all the specific data on the desks, including location and status (i.e. occupied, clean, dirty). It's one of the core parts of our cleaning system. Both Clyde and users will access the database.
+The booking database is built based on mysql. Database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), timer and desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde  app and our robot will use mysql-python connector to get the target location and find the suitable path in ros.
+
 
 ### Navigation:
 
