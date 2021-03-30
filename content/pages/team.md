@@ -13,19 +13,6 @@ draft: false
 
 ## Meet the team!
 
-| Image                       | Name                 | Role                 |
-| --------------------------- | -------------------- | :------------------- |
-| ![image](../media/lars.jpg) | Lars Thalian Morstad | Hardware Team Leader |
-| ![image](../media/lars.jpg) | Adel Sefiane         | centered             |
-| ![image](../media/lars.jpg) | Sean Strain          | are neat             |
-| ![image](../media/lars.jpg) | Janek Smialek        | are neat             |
-| ![image](../media/lars.jpg) | Ryan Schuller        | are neat             |
-| ![image](../media/lars.jpg) | Jeffrey              | are neat             |
-| ![image](../media/lars.jpg) | Ivan                 | are neat             |
-| ![image](../media/lars.jpg) | Shining              | are neat             |
-
-## Meet the team!
-
 <div class="team-member">
 	<img src="../media/lars.jpg" class="member-image">
 	<div class="member-description">
@@ -35,12 +22,22 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/lars.jpg" class="member-image">
+	<img src="../media/Adel.jpg" class="member-image">
 	<div class="member-description">
-		<p class="member-name">Lars Thalian Morstad</p>
-		<p class="member-role">Hardware Team Leader</p>
+		<p class="member-name">Adel Sefiane</p>
+		<p class="member-role">Hardware, Arm Guy</p>
 	</div>
 </div>
+
+<div class="team-member">
+	<img src="../media/ryan.png" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Ryan Schuller</p>
+		<p class="member-role">Team Leader, Hardware, Video Guy</p>
+	</div>
+</div>
+
+<!-- Add yourself here -->
 
 ## Team Management
 

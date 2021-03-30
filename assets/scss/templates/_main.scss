@@ -6,7 +6,7 @@
 .feature-card {
   border-radius: 10px;
   padding: 20px;
-  transition: .2s ease;
+  transition: 0.2s ease;
   background-color: $white;
 
   &:hover {
@@ -59,7 +59,6 @@ a.post-title {
 }
 
 .content {
-
   * {
     word-break: break-word;
     overflow-wrap: break-word;
@@ -114,7 +113,7 @@ a.post-title {
 
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         height: 8px;
         width: 8px;
         border-radius: 50%;
@@ -131,11 +130,12 @@ a.post-title {
     max-width: 100%;
     margin-bottom: 1rem;
     border: 1px solid $border-color;
+    font-size: 16px;
   }
 
   table td,
   table th {
-    padding: .75rem;
+    padding: 0.75rem;
     vertical-align: top;
     margin-bottom: 0;
   }
@@ -192,21 +192,20 @@ a.post-title {
   }
 
   .notices.note p::after {
-    content: 'Note';
+    content: "Note";
     position: absolute;
     top: 2px;
     color: $white;
     left: 2rem;
   }
 
-
   .notices.tip p {
-    border-top: 30px solid #78C578;
+    border-top: 30px solid #78c578;
     background: $white;
   }
 
   .notices.tip p::after {
-    content: 'Tip';
+    content: "Tip";
     position: absolute;
     top: 2px;
     color: $white;
@@ -214,32 +213,30 @@ a.post-title {
   }
 
   .notices.info p {
-    border-top: 30px solid #F0B37E;
+    border-top: 30px solid #f0b37e;
     background: $white;
   }
 
   .notices.info p::after {
-    content: 'Info';
+    content: "Info";
     position: absolute;
     top: 2px;
     color: $white;
     left: 2rem;
   }
 
-
   .notices.warning p {
-    border-top: 30px solid #E06F6C;
+    border-top: 30px solid #e06f6c;
     background: $white;
   }
 
   .notices.warning p::after {
-    content: 'Warning';
+    content: "Warning";
     position: absolute;
     top: 2px;
     color: #fff;
     left: 2rem;
   }
-
 
   blockquote {
     font-size: 20px !important;
@@ -267,7 +264,6 @@ a.post-title {
     font-size: 100%;
   }
 }
-
 
 // pagination
 .pagination {
@@ -337,7 +333,7 @@ a.post-title {
       padding: 0;
       border: 1px solid $primary-color;
       background-color: transparent;
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
   }
 }
@@ -352,7 +348,7 @@ a.post-title {
   }
 }
 
-.price{
+.price {
   font-size: 50px;
   color: $text-color-dark;
 }
