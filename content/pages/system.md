@@ -15,7 +15,7 @@ draft: false
 The current coronavirus pandemic how important spaces life libraries and offices are for us, but also how important and difficult it is to keep them clean and safe. ClyDe is a surface-cleaning robot meant to be deployed in these highly-trafficed spaces, where it disinfects desks after they have been used. This will assist cleaner's jobs by helping with a monotonous and repetetive task, allowing them to spend their time elsewhere.
 
 # What can ClyDe do?
-
+---
 ## **Surface Disinfecting**
 
 ClyDe's main function is to autonomously clean and disinfect desk surfaces. The main target environment for ClyDe to work in are librarys, however he could also be set to work in office spaces.
@@ -25,7 +25,7 @@ ClyDe navigates throughout the environment and disinfects the surface of any des
 In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil with a sponge on the end. Disinfectant is absorbed into the sponge using a pump.
 
 # How does this system come into contact with users?
-
+---
 ## **ClyDe Companion App**
 
 The main way users interact with CLYDE is through our ClyDe Companion app.
