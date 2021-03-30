@@ -24,6 +24,8 @@ ClyDe navigates throughout the environment and disinfects the surface of any des
 
 In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil with a sponge on the end. Disinfectant is absorbed into the sponge using a pump.
 
+# How does this system come into contact with users?
+
 ### **ClyDe Companion App**
 
 The main way users interact with CLYDE is through our ClyDe Companion app.
