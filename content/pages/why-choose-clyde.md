@@ -15,7 +15,7 @@ draft: false
 
 ### Why choose us
 
-You may have seen a large amount of assistive cleaning robots before -- but do they meet the certain needs given a certain environment where you really need one? Are you tried of seeing most cleaning robots limited to the household floor cleaning type, including vacuuming, sweeping and mopping. ClyDe plays a perfect role in serving  table cleaning robot which will create safer public spaces due to the less exposure for cleaners and visitors. With a robot doing the monotonous and repetitive task of cleaning hundreds of desks, cleaners will be freed up to do more demanding tasks!
+You may have seen a large amount of assistive cleaning robots before -- but do they meet the certain needs given a certain environment where you really need one? Are you tried of seeing most cleaning robots limited to the household floor cleaning type, including vacuuming, sweeping and mopping. ClyDe plays a perfect role in serving as a table cleaning robot which will create safer public spaces due to the less exposure for cleaners and visitors. With a robot doing the monotonous and repetitive task of cleaning hundreds of desks, cleaners will be freed up to do more demanding tasks!
 
 <hr>
 
