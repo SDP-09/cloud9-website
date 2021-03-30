@@ -44,14 +44,6 @@ draft: false
 		<p class="member-role">Software, Evaluation Guy</p>
 	</div>
 </div>
-
-<div class="team-member">
-	<img src="../media/janek_picture.png" class="member-image">
-	<div class="member-description">
-		<p class="member-name">Janek</p>
-		<p class="member-role">Software, Navigation</p>
-	</div>
-</div>
 <!-- Add yourself here -->
 
 ## Team Management
@@ -62,3 +54,16 @@ Major tasks for them included desiging the cleaning tool and how it would be con
 
 The second sub-team focused on navigation, whivh includes pathfinding, map-building and obstacle avoidance.
 While this organization proved useful for the first few weeks of the project, the hardware team soon ran out of tasks because of the simulated nature of the project. Luckily, we had as a team made sure that everyone were up to speed with what everyone else is doing through effective communication and weekly team meetings. This allowed the hardware team to assist software on numerous tasks, and made sure there was always someone ready to help out with any problems.
+
+## Development tools
+Our main task organisatation and assignment was done through Trello. This made it easy to delegate tasks to sub-teams, and to check on their progress. In our weekly team meetings, we reviewed the Trello tasks, their progress and assigned new ones.
+
+The team used Git version control to great effect. Repositories were created for each component, and we used branches within those to work on invidividual features. This allowed us to be flexible, and made code sharing easy. 
+
+Google Drive has been an essential tool for other collaborative tasks, like the demo reports, videos and the user guide. Drive allows for easy sharing of large files, and easy integration with Google Docs, Slides and Sheets. Especially Google Docs has very useful, as it has allowed us to quickly make drafts for the reports before porting them to latex.
+
+The team's main communication platform was Discord. It allowed us to create text channels dedicated to sub-teams, individual important tasks and team administration. This meant our communication was structured and had a low barrier to entry. Discord also supports voice communication and easy screen sharing. 
+
+
+
+
