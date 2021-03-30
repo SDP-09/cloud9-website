@@ -11,19 +11,28 @@ description: "This is meta description"
 draft: false
 ---
 
-### The full Cloud 9 cleaning system includes many parts, including:
+### The full Cloud 9 cleaning system includes several parts:
 
 - An autonomous desk cleaning robot, named Clyde.
 - A navigation stack for moving the robot between desks and mapping an area.
 - A database that holds the locations of all tables, their sizes and colours.
 - An arm that is attached to Clyde that cleans the desk.
 - An accompanying app that facilitates desk booking.
+- A Raspberry Pi comtroller computer.
 
 These parts come together to make an autonomous sanitising system for desk tops and other flat surfaces in spaces such as libraries.
 
 Below are more in-depth descriptions of each sub-system.
 
 ![image](../media/stateDiagram.png)
+## ROS2 
+The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007. 
+ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. 
+
+## Webots Simulator
+Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development. 
+ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic. 
+Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferrable to writing controller software directly in webots. This is beacuse a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
 
 ### The Mobile App:
 
@@ -37,7 +46,7 @@ The app is implemented using Android Studio with Kotlin.
 
 ### The Database:
 
-The booking database is built based on mysql. Database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), timer and desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde  app and our robot will use mysql-python connector to get the target location and find the suitable path in ros.
+The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
 
 
 ### Navigation:
@@ -46,7 +55,7 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 
 ![image](../media/RVIZ.PNG)
 
-- Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually. The animation … shows an example of the mapping in action.
+- Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually.  The animation … shows an example of the mapping in action.
 
 ![image](../media/test_world_OGM.png)
 
