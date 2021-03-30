@@ -24,9 +24,28 @@ ClyDe navigates throughout the environment and disinfects the surface of any des
 
 In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil with a sponge on the end. Disinfectant is absorbed into the sponge using a pump.
 
-### **Companion App**
+### **ClyDe Companion App**
 
-The main way users interact with CLYDE is through our companion app.
+The main way users interact with CLYDE is through our ClyDe Companion app.
+
+#### Features ####
+
+Users are only concerned with two features from the app.
+
+The first is scanning the QR code on the table when they arrive and start using it. Since the QR code will contain the ID of the table, this allows the user to verify they are at the right table if they have booked it. This serves to let ClyDe know that the table is currently being used.
+
+The second feature is to again scan the QR code, but this time once they have finished using the table and are leaving. This serves to let ClyDe know that the table needs to be cleaned.
+
+It is possible in the future to integrate the app with the booking system that a library might already have in place, allowing for a more smooth user experience.
+
+### **ClyDe Controller**
+This serves as a controller for staff to interact will ClyDe in various ways, such as telling him to start patrolling as well as to come back home.
+
+#### Features ####
+
+Displays diagnostic info.
+
+Can give instructions to ClyDe.
 
 ### **Map building with Cartographer**
 
