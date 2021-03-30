@@ -54,7 +54,7 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 
 - All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
 
-### Vision
+### Computer Vision
 
 Clyde uses computer vision to perform two separate tasks. (preconditions before cleaning can be performed)
 
