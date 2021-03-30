@@ -16,7 +16,7 @@ draft: false
 | Image                       | Name                 | Role                 |
 | --------------------------- | -------------------- | :------------------- |
 | ![image](../media/lars.jpg) | Lars Thalian Morstad | Hardware Team Leader |
-| ![image](../media/lars.jpg) | Adel Sefiane         | centered             |
+| ![image](../media/Adel.jpg) | Adel Sefiane         | centered             |
 | ![image](../media/lars.jpg) | Sean Strain          | are neat             |
 | ![image](../media/lars.jpg) | Janek Smialek        | are neat             |
 | ![image](../media/lars.jpg) | Ryan Schuller        | are neat             |
