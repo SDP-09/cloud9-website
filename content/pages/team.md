@@ -37,6 +37,13 @@ draft: false
 	</div>
 </div>
 
+<div class="team-member">
+	<img src="../media/Ivan Sun.jpeg" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Ivan Sun</p>
+		<p class="member-role">Software, Evaluation Guy</p>
+	</div>
+</div>
 <!-- Add yourself here -->
 
 ## Team Management
