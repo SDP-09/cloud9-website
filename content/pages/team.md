@@ -44,6 +44,14 @@ draft: false
 		<p class="member-role">Software, Evaluation Guy</p>
 	</div>
 </div>
+
+<div class="team-member">
+	<img src="../media/janek_picture.png" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Janek</p>
+		<p class="member-role">Software, Navigation and Error Guy</p>
+	</div>
+</div>
 <!-- Add yourself here -->
 
 ## Team Management
