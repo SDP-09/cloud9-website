@@ -46,10 +46,18 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/jeffreyzhang.jpg" class="member-image">
+	<img src="../media/chris.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Jeffrey Zhang</p>
 		<p class="member-role">Hardware, Database, App Guy</p>
+	</div>
+</div>
+
+<div class="team-member">
+	<img src="../media/Shining.jpg" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Shining</p>
+		<p class="member-role">Computer Vision, App Guy</p>
 	</div>
 </div>
 
@@ -62,13 +70,7 @@ draft: false
 </div>
 
 
-<div class="team-member">
-	<img src="../media/Shining.jpg" class="member-image">
-	<div class="member-description">
-		<p class="member-name">Shining</p>
-		<p class="member-role">Computer Vision, App Guy</p>
-	</div>
-</div>
+
 <!-- Add yourself here -->
 
 ## Team Management
