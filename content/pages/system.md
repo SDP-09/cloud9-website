@@ -34,7 +34,7 @@ In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil wi
 
 The main way users interact with CLYDE is through our ClyDe Companion app.
 
-<img src="../media/app_home.png" height="500" />
+<center><img src="../media/app_home.png" height="500"/></center>
 
 
 #### Features
@@ -50,7 +50,7 @@ It is possible in the future to integrate the app with the booking system that a
 ### **ClyDe Controller**
 This serves as a controller for staff to interact will ClyDe in various ways, such as telling him to start patrolling as well as to come back home.
 
-<img src="../media/raspi.png" width="500" />
+<center><img src="../media/raspi.png" width="500" /></center>
 
 #### Features
 
