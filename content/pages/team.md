@@ -29,6 +29,16 @@ draft: false
 	</div>
 </div>
 
+<div class="team-member">
+	<img src="../media/ryan.png" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Ryan Schuller</p>
+		<p class="member-role">Team Leader, Hardware, Video Guy</p>
+	</div>
+</div>
+
+<!-- Add yourself here -->
+
 ## Team Management
 
 Our team was split into two sub-teams, software and hardware. The hardware team was responsible for the physical design of the robot and testing the chosen parts remotely with help of the technicians.
