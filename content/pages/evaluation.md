@@ -31,6 +31,7 @@ A key feature of ClyDe is being able to navigate from one place to another in a 
 As can be seen from the table, the navigator is quite reliable. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal.
 
 ## Obstruction Detection
+As ClyDe is currently not able to clean desks that have large obstructions on them, it is important that we have a reliable obstruction detection routine. Below is a table containing the results of tesing many possible variations that could impact the routine. 
 
 | **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. color** | **Table color** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
 | --------------------- | ----------------- | ------------ | ------------- | -------------- | --------------- | ----------------- | --------------------- | ----------- |
@@ -58,21 +59,22 @@ As can be seen from the table, the navigator is quite reliable. However, sometim
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | low                   | Success     |
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
+As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. 
 ## QR Code detection
 
-| Angle/degree | Distance/meter | Detected | Graph                                  |
-| ------------ | -------------- | -------- | -------------------------------------- |
-| 10           | 5              | no       | ![image](../media/evaluation/105.png)  |
-| 10           | 10             | no       | ![image](../media/evaluation/110.png)  |
-| 10           | 15             | no       | ![image](../media/evaluation/115.png)  |
-| 30           | 5              | yes      | ![image](../media/evaluation/305.png)  |
-| 30           | 10             | no       | ![image](../media/evaluation/310.png)  |
-| 30           | 15             | no       | ![image](../media/evaluation/315.png)  |
-| 45           | 5              | yes      | ![image](../media/evaluation/455.png)  |
-| 45           | 10             | yes      | ![image](../media/evaluation/4510.png) |
-| 45           | 15             | no       | ![image](../media/evaluation/4515.png) |
-| 60           | 5              | yes      | ![image](../media/evaluation/605.png)  |
-| 60           | 10             | yes      | ![image](../media/evaluation/6010.png) |
+| Angle/degree | Distance/meter | Detected |
+| ------------ | -------------- | -------- |
+| 10           | 5              | no       |
+| 10           | 10             | no       |
+| 10           | 15             | no       |
+| 30           | 5              | yes      |
+| 30           | 10             | no       |
+| 30           | 15             | no       |
+| 45           | 5              | yes      |
+| 45           | 10             | yes      |
+| 45           | 15             | no       |
+| 60           | 5              | yes      |
+| 60           | 10             | yes      |
 
 # Shortcomings and Attempted Solutions
 
