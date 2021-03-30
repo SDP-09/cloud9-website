@@ -11,7 +11,7 @@ description: "This is meta description"
 draft: false
 ---
 
-# Total System Cost
+## Total System Cost
 
 | Item                             | Quantity | Cost in £ |
 | -------------------------------- | -------- | :-------- |
@@ -27,7 +27,7 @@ draft: false
 | **Total**                             |          | **1,915**       |
 
 
-# Budget
+## Budget
 The team was given a budget of £200 to spend on the project. Below is a breakdown of how this was done.
 | Item                             | Cost in £ |
 | -------------------------------- | :-------- |
