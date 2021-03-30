@@ -14,7 +14,7 @@ draft: false
 ## Meet the team!
 
 <div class="team-member">
-	<img src="../media/lars.jpg" class="member-image">
+	<img src="../media/team-images/lars.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Lars Thalian Morstad</p>
 		<p class="member-role">Hardware Team Leader</p>
@@ -22,7 +22,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/Adel.jpg" class="member-image">
+	<img src="../media/team-images/Adel.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Adel Sefiane</p>
 		<p class="member-role">Hardware, Arm Guy</p>
@@ -30,7 +30,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/ryan.png" class="member-image">
+	<img src="../media/team-images/ryan.png" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Ryan Schuller</p>
 		<p class="member-role">Team Leader, Hardware, Video Guy</p>
@@ -38,7 +38,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/Ivan Sun.jpeg" class="member-image">
+	<img src="../media/team-images/Ivan-Sun.jpeg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Ivan Sun</p>
 		<p class="member-role">Software, Evaluation Guy</p>
@@ -46,7 +46,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/jeffrey.jpg" class="member-image">
+	<img src="../media/team-images/jeffrey.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Jeffrey Zhang</p>
 		<p class="member-role">Hardware, Database, App Guy</p>
@@ -54,7 +54,7 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/Shining.jpg" class="member-image">
+	<img src="../media/team-images/Shining.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Shining</p>
 		<p class="member-role">Computer Vision, App Guy</p>
@@ -62,14 +62,12 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/picture_janek.png" class="member-image">
+	<img src="../media/team-images/picture_janek.png" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Janek</p>
 		<p class="member-role">Software, Navigation Guy</p>
 	</div>
 </div>
-
-
 
 <!-- Add yourself here -->
 
