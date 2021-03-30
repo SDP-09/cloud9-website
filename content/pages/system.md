@@ -22,9 +22,11 @@ The current coronavirus pandemic how important spaces life libraries and offices
 
 ClyDe's main function is to autonomously clean and disinfect desk surfaces. The main target environment for ClyDe to work in are librarys, however he could also be set to work in office spaces.
 
-ClyDe navigates throughout the environment and disinfects the surface of any desks that are marked as dirty. In order to mark desks as dirty, people are asked to scan the QR code on the table using the ClyDe Companion app. The app then changes the entry for that desk to 'dirty'.
+ClyDe navigates throughout the environment and disinfects the surface of any desks that are marked as dirty. In order to mark desks as dirty, people are asked to scan the QR code on the table using the ClyDe Companion app as they leave. The app then changes the entry for that desk to 'dirty'.
 
-In order to disinfect a desk, ClyDe uses his arm which has a squeegee utensil with a sponge on the end. Disinfectant is absorbed into the sponge using a pump.
+ClyDe will move to a target desk and scan the QR code on that desk in order to confirm it is the correct one. ClyDe then uses his arm which has a squeegee utensil with a sponge on the end to clean the desk. Disinfectant is absorbed into the sponge using a pump.
+
+Clyde is easy to work with and maintanence is no worry, all that is required is to charge his battery and keep the reservoir of disinfectant full.
 
 ## How does this system come into contact with users?
 
