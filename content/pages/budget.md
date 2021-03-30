@@ -10,9 +10,9 @@ description: "This is meta description"
 # post draft
 draft: false
 ---
+
 ## Total System Cost
-=======
-# Total System Cost
+
 Below is a breakdown of the total cost of all components in the system. When including consts from setup, logistics and admin as well as profit, we project the system will be sold for £4,000.
 
 | Item                             | Quantity | Cost in £ |
@@ -29,11 +29,11 @@ Below is a breakdown of the total cost of all components in the system. When inc
 |                                  |          |           |
 | **Total**                        |          | **1,925** |
 
-
 ## Budget
+
 The team was given a budget of £200 to spend on the project. Below is a breakdown of how this was done.
-| Item                          | Cost in £ |
+| Item | Cost in £ |
 | ----------------------------- | :-------- |
-| Cloud Database Hosting        | (20)      |
-|                               |           |
-| **Total Remaining of Budget** | **180**   |
+| Cloud Database Hosting | (20) |
+| | |
+| **Total Remaining of Budget** | **180** |
