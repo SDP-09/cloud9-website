@@ -32,8 +32,9 @@ Below is a breakdown of the total cost of all components in the system. When inc
 ## Budget
 
 The team was given a budget of £200 to spend on the project. Below is a breakdown of how this was done.
-| Item | Cost in £ |
+
+| Item                          | Cost in £ |
 | ----------------------------- | :-------- |
-| Cloud Database Hosting | (20) |
-| | |
-| **Total Remaining of Budget** | **180** |
+| Cloud Database Hosting        | (20)      |
+|                               |           |
+| **Total Remaining of Budget** | **180**   |

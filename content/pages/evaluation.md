@@ -48,17 +48,16 @@ draft: false
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | low                   | Success     |
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
-| Angle/degree | Distance/meter | Detected | Graph                                   |
-| ------------ | -------------- | -------- | --------------------------------------- |
-| 10           | 5              | no       | ![image](../media/evaluation/105.png)   |
-| 10           | 10             | no       | ![image](../media/evaluation/110.png)   |
-| 10           | 15             | no       | ![image](../media/evaluation/115.png)   |
-| 30           | 5              | yes      | ![image](../media/evaluation/305.png)   |
-| 30           | 10             | no       | ![image](../media/evaluation/310.png)   |
-| 30           | 15             | no       | ![image](../media/evaluation/315.png)   |
-| 45           | 5              | yes      | ![image](../media/evaluation/455.png)   |
-| 45           | 10             | yes      | ![image](../media/evaluation/4510.png)  |
-| 45           | 15             | no       | ![image](../media/evaluation/4515.png)  |
-| 60           | 5              | yes      | ![image](../media/evaluation/605.png)   |
-| 60           | 10             | yes      | ![image](../media/evaluation/6010.png)  |
-| 60           | 15             | yes      | ![image](../media/description/6015.png) |
+| Angle/degree | Distance/meter | Detected | Graph                                  |
+| ------------ | -------------- | -------- | -------------------------------------- |
+| 10           | 5              | no       | ![image](../media/evaluation/105.png)  |
+| 10           | 10             | no       | ![image](../media/evaluation/110.png)  |
+| 10           | 15             | no       | ![image](../media/evaluation/115.png)  |
+| 30           | 5              | yes      | ![image](../media/evaluation/305.png)  |
+| 30           | 10             | no       | ![image](../media/evaluation/310.png)  |
+| 30           | 15             | no       | ![image](../media/evaluation/315.png)  |
+| 45           | 5              | yes      | ![image](../media/evaluation/455.png)  |
+| 45           | 10             | yes      | ![image](../media/evaluation/4510.png) |
+| 45           | 15             | no       | ![image](../media/evaluation/4515.png) |
+| 60           | 5              | yes      | ![image](../media/evaluation/605.png)  |
+| 60           | 10             | yes      | ![image](../media/evaluation/6010.png) |
