@@ -11,8 +11,12 @@ description: "This is meta description"
 draft: false
 ---
 
+<<<<<<< HEAD
+## Total System Cost
+=======
 # Total System Cost
 Below is a breakdown of the total cost of all components in the system. When including consts from setup, logistics and admin as well as profit, we project the system will be sold for £4,000.
+>>>>>>> e6084db333ab9104270f6aa86052d3aff96df2f2
 
 | Item                             | Quantity | Cost in £ |
 | -------------------------------- | -------- | :-------- |
@@ -29,7 +33,7 @@ Below is a breakdown of the total cost of all components in the system. When inc
 | **Total**                        |          | **1,925** |
 
 
-# Budget
+## Budget
 The team was given a budget of £200 to spend on the project. Below is a breakdown of how this was done.
 | Item                          | Cost in £ |
 | ----------------------------- | :-------- |

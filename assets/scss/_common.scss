@@ -4,12 +4,12 @@ body {
 }
 
 ::selection {
-  background-color:darken($color: $primary-color, $amount: 10);
+  background-color: darken($color: $primary-color, $amount: 10);
   color: $white;
 }
 
 body::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -20,7 +20,6 @@ body::-webkit-scrollbar-thumb {
   background-color: $primary-color;
   outline: 2px solid #fff;
 }
-
 
 /* preloader */
 
@@ -57,7 +56,7 @@ a,
 button,
 select {
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 
   &:focus {
     outline: 0;
@@ -102,13 +101,13 @@ a:hover {
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background-color: $black;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -124,12 +123,12 @@ a:hover {
   color: $primary-color !important;
 }
 
-.rounded-lg{
+.rounded-lg {
   border-radius: 10px !important;
 }
 
-.shadow{
-  box-shadow: 0 12px 24px -6px rgba(45,67,121,.10) !important;
+.shadow {
+  box-shadow: 0 12px 24px -6px rgba(45, 67, 121, 0.1) !important;
 }
 
 // form control
@@ -150,16 +149,16 @@ textarea.form-control {
   height: 100px !important;
 }
 
-.list-unstyled{
-  li{
+.list-unstyled {
+  li {
     margin-bottom: 10px;
   }
 }
 
-.check-mark{
+.check-mark {
   position: relative;
   padding-left: 0px;
-  &::before{
+  &::before {
     position: absolute;
     content: "\e64c";
     font-family: $icon-font;
@@ -173,5 +172,65 @@ textarea.form-control {
     text-align: center;
     left: -30px;
     top: 3px;
+  }
+}
+
+.team-member {
+  display: block;
+  // padding-bottom: 10px;
+  // padding-top: 30px;
+}
+.member-image {
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+}
+.member-description {
+  width: calc(98% - 14em);
+  vertical-align: middle;
+  margin-left: 20px;
+  display: inline-block;
+}
+.member-name {
+  color: #222;
+  // font-size: 45px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.member-role {
+  line-height: 1;
+  // font-size: 25px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 795px) {
+  .team-member {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+  .member-image {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  .member-description {
+    width: 100%;
+    margin-left: 0;
+  }
+  .member-name {
+    // width: 100vw;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 10px !important;
+  }
+  .member-role {
+    // width: 100vw;
+    line-height: 1;
+    font-size: 20px;
   }
 }
