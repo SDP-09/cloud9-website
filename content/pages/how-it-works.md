@@ -33,6 +33,8 @@ If the user chooses to check in a table, the table will be marked “occupied”
 
 If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
 
+The app is implemented using Android Studio with Kotlin.
+
 ### The Database:
 
 The booking database is built based on mysql. Database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), timer and desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde  app and our robot will use mysql-python connector to get the target location and find the suitable path in ros.
