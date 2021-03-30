@@ -61,6 +61,14 @@ draft: false
 	</div>
 </div>
 
+
+<div class="team-member">
+	<img src="../media/Shining.jpg" class="member-image">
+	<div class="member-description">
+		<p class="member-name">Shining</p>
+		<p class="member-role">Computer Vision, App Guy</p>
+	</div>
+</div>
 <!-- Add yourself here -->
 
 ## Team Management
