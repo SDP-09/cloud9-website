@@ -61,8 +61,9 @@ As ClyDe is currently not able to clean desks that have large obstructions on th
 
 As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. 
 ## QR Code detection
+ClyDe relies on QR codes attached to tables to confirm it's location and update the statuses of tables in the database. Therefore it is important that the QR code detection is reliable. Below is a table where a camera was held at several different angles and distances, to determine in what conditions QR codes could be detected. This was later used to inform decisions on how to angle the arm to best detect the QR codes. 
 
-| Angle/degree | Distance/meter | Detected |
+| Angle/degree | Distance/cm    | Detected |
 | ------------ | -------------- | -------- |
 | 10           | 5              | no       |
 | 10           | 10             | no       |
@@ -75,6 +76,10 @@ As can be seen from the table, the obstruction detection is reliable in most cir
 | 45           | 15             | no       |
 | 60           | 5              | yes      |
 | 60           | 10             | yes      |
+| 60           | 15             | yes      |
+
+
+As can be seen from this table, QR detection is quite reliant on angle and distance. The routine fonctions best when at a steep angle(looking at the code from above), and is close to the code. 
 
 # Shortcomings and Attempted Solutions
 
