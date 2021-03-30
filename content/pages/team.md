@@ -49,7 +49,7 @@ draft: false
 	<img src="../media/janek_picture.png" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Janek</p>
-		<p class="member-role">Software, Navigation and Error Guy</p>
+		<p class="member-role">Software, Navigation</p>
 	</div>
 </div>
 <!-- Add yourself here -->
