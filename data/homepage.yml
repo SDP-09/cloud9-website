@@ -15,32 +15,32 @@ feature:
   feature_item:
     # feature item loop
     - name : "Increase safty"
-      icon : "ti-pulse"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      icon : "ti-heart"
+      content : "Reduce the contact points for workers in your building"
       
     # feature item loop
     - name : "Decrease cost"
-      icon : "ti-package"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      icon : "ti-money"
+      content : "Avoid having to hire extra cleaning staff to meet cleanliness targets"
       
     # feature item loop
     - name : "Autonomous navigation"
-      icon : "ti-alarm-clock"
+      icon : "ti-map-alt"
       content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
       
     # feature item loop
     - name : "Desk booking app"
-      icon : "ti-credit-card"
+      icon : "ti-mobile"
       content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
       
     # feature item loop
     - name : "QR code scanning"
-      icon : "ti-headphone-alt"
+      icon : "ti-target"
       content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
       
     # feature item loop
-    - name : "Feature 6"
-      icon : "ti-cloud-up"
+    - name : "Obstacle avoidance"
+      icon : "ti-vector"
       content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
       
 
