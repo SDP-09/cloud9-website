@@ -33,6 +33,8 @@ If the user chooses to check in a table, the table will be marked “occupied”
 
 If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
 
+The app is implemented using Android Studio with Kotlin.
+
 ### The Database:
 
 The booking database is built based on mysql. Database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), timer and desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde  app and our robot will use mysql-python connector to get the target location and find the suitable path in ros.
@@ -52,17 +54,21 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 
 - All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
 
-### Vision
+### Computer Vision
 
 Clyde uses computer vision to perform two separate tasks. (preconditions before cleaning can be performed)
 
-1. Scanning QR code on desk.  
-  When Clyde reaches the desired desk, it first finds the QR code on the desk and retrieves the desk number from the QR code, then checks if the desk number matches the desired one.
+Before any cleaning is performed, ClyDe will keep adjusting the angle of the camera, take pictures of the current table and perform the following two steps.
 
-2. Detecting obstruction on desk.  
-  After the first checking is done, the robot will take a picture of the whole table and perform an obstruction detection algorithm using computer vision. This ensures the desk is empty before any cleaning is performed.
+1. Scanning QR code on desk.
+Firstly, ClyDe performs a zoom in function on the picture which separates the picture into small pieces, then it tries to detect any QR codes using pyzbar on each piece of them. Pyzbar is a python package for dealing with QR code, using the decode() function in this package, ClyDe retrieves the information from the QR code. Once ClyDe gets the information from the table , it checks if the current table number matches the desired one.
+
+
+2. Detecting obstruction on desk.
+After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
+![image](../media/illu3.jpg)
 
 ### The Arm
 
