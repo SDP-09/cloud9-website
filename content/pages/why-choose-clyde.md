@@ -1,5 +1,5 @@
 ---
-title: "Why Choose Clyde"
+title: "Why Choose ClyDe"
 date: 2020-04-18T10:07:21+06:00
 # post image
 image: "images/blog/post-1.jpg"
@@ -28,7 +28,7 @@ We carried out a complete series of analysis before bringing the product to mark
 ![image](../media/Q7.png)
 
 The general impression of the product is quite positive. 90% of the candidates give general positive feedback to the product. 95% of the candidates think this product is believable and reliable, meaning that there will be few difficulties when they use this product. 95% of the candidates also like the idea and find it relevant to their life. 
-The product may lack some innovation; only 53% of the candidates think this product is extremely or very unique. Since the product remains as a prototype currently, only 53% of the candidates find the layout very appealing with an additional 32\% who think it is somewhat appealing. 
+The product may lack some innovation; only 53% of the candidates think this product is extremely or very unique. Since the product remains as a prototype currently, only 53% of the candidates find the layout very appealing with an additional 32% who think it is somewhat appealing. 
 
 Overall, it can be concluded that the business idea of the cleaning robot and accompanying product proves to be very successful!
 
