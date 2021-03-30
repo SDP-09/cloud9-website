@@ -27,7 +27,7 @@ Below are more in-depth descriptions of each sub-system.
 ![image](../media/stateDiagram.png)
 ## ROS2 
 The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007. 
-ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. 
+ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Below is a subset of all the nodes that are running when ClyDe is active.
 ![image](../media/rosgraph.png)
 
 ## Webots Simulator
@@ -72,10 +72,11 @@ Before any cleaning is performed, ClyDe will keep adjusting the angle of the cam
 
 1. Scanning QR code on desk.
 Firstly, ClyDe performs a zoom in function on the picture which separates the picture into small pieces, then it tries to detect any QR codes using pyzbar on each piece of them. Pyzbar is a python package for dealing with QR code, using the decode() function in this package, ClyDe retrieves the information from the QR code. Once ClyDe gets the information from the table , it checks if the current table number matches the desired one.
-
+![image](../media/evaluationn/6015.png)
 
 2. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
+![image](../media/CannyEdge3.png)
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 ![image](../media/illu3.jpg)
@@ -83,6 +84,7 @@ Once the cleaning is done, the robot will connect to the database and update the
 ### The Arm
 
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 (?) robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk, then carries out a series of movements to perform the sanitisation.
+![image](../media/fullArmMotion.png)
 
 ### The Cleaner
 
