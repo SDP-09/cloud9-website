@@ -49,15 +49,15 @@ draft: false
 	<img src="../media/jeffreyzhang.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Jeffrey Zhang</p>
-		<p class="member-role">Hardware, App Guy</p>
+		<p class="member-role">Hardware, Database, App Guy</p>
 	</div>
 </div>
 
 <div class="team-member">
-	<img src="../media/janek_picture.png" class="member-image">
+	<img src="../media/picture_janek.png" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Janek</p>
-		<p class="member-role">Software, Navigation</p>
+		<p class="member-role">Software, Navigation Guy</p>
 	</div>
 </div>
 
