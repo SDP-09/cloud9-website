@@ -71,3 +71,28 @@ ClyDe contains several subsystems(Described in "System" and "How it works" secti
 | 45           | 15             | no       | ![image](../media/evaluation/4515.png) |
 | 60           | 5              | yes      | ![image](../media/evaluation/605.png)  |
 | 60           | 10             | yes      | ![image](../media/evaluation/6010.png) |
+
+# Shortcomings and Attempted Solutions
+
+### Problem: Instability and documentation issues.
+Getting ROS2 to work on everyone’s systems proved to bea setback. Identical installations on new Virtual Machinesproduced different errors.  Even at the end of the projectthis is causing errors for some team members. Parts of ourissues stem from there being little documentation on ROS2as a whole, but also on Webots and how the two interact.We believe this issue will have to be rectified before ROS2and its Webots integration can be considered accessible tobeginners. 
+
+Unfortunately, this was inevitable due to the necessity ofsimulating the robot and so there were no direct solutions tothis. We did however have an error channel on our Siscordserver to efficiently help anyone who was having compati-bility issues, and this helped us solve many. 
+
+In hindsight, we believe we would have preferred to gowith Gazebo over Webots as it provides a better platform toimplement in-depth features at higher efficiency. Gazeboalso has far more examples and documentation.  Had webeen able to work directly with the robot we predict thatintegration would have been more seamless
+### Problem: Navigator being unreliable.
+A large blocker for the navigation team was the fact that thenavigator packages seem to be inherently unreliable. Muchlike ROS2 as a whole, it seemed to be more stable on somesystems than others.  This contributed to the issues withintegrating the robot arm, as investigating them were madedifficult. 
+Attempted Solution: The team investigated intothe source code of the navigator and tried to reinstall to noavail.
+### Problem: Inability to perform some important qualita-tive analysis.
+There are aspects of the robot that we were not able to testsince we were not working with a physical product. An ex-ample of this is the cleaning motion of the robot. While weknow it is feasible for a robot arm to carry out the motionsto properly disinfect a surface according to UK Govern-ment guidelines, we were not able to test if the way weprogrammed the arm nor the cleaning utensil we used isadequate. There is nothing we can do about this, howeverit is true that the arm and cleaning motion is somethingthat can easily be modified for future versions of ClyDeand would not require a complete overhaul as to render theproject unusable.
+
+# Future Direction of ClyDe
+
+### Scaled up version.
+Currently, we are using the Robotis Waffle Pi as the basefor ClyDe. In reality, another base would have to be usedsince the Waffle Pi is too short to house an arm that couldreach on top of a table. This base could be custom built (i.e3D Printed) since it would not have to carry particularlyheavy loads.
+### More user friendly App.
+Our app works, however it is not as feature complete as wewould have liked it to be for the full product. Given time, itwould be simple to implement many important features thatwould improve user experience, such as:  Text-to-Speechfor the visually impaired, ensuring existing screen-readerswork, colourblind settings and ensuring font readability.While explicitly made for the Web, the Web Content Acces-sibility Guidelines(WCAG) 2.1 will be a useful referencefor achieving accessibility for a mobile app as well. (W3C,2018)
+### Web-app for staffto interface with ClyDe.
+As it stands, to start and stop ClyDe, the staffwould haveto use the ClyDe Controller which is the Raspberry Pi wesend out with the robot. While we might not be able to com-pletely get rid of the Pi since it runs the navigation package,we could introduce a web-app (or an addition to the currentapp) which could allow the staffto start and stop ClyDeas well as add desks individually from their computer orphone. This would eliminate the need to interact with thePi, and means it just needs to be left running to operate thenavigator.We believe this feature would be straight-forward to imple-ment since we already have the framework set up throughthe database for the booking system. Additionally ROS2has packages to interact with the Web.
+### General Hardware improvements.
+Since we were not able to create a physical robot, thereare naturally going to be some flaws in our design that willcome to light once it is actually built.  We estimate thatthese kind of issues will not require a complete overhaul ofthe design, and so this point should not be much of an issue,particularly considering that our design is a prototype.
