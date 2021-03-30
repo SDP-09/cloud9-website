@@ -44,7 +44,7 @@ draft: false
 		<p class="member-role">Software, Evaluation Guy</p>
 	</div>
 </div>
-<!-- Add yourself here -->
+
 <div class="team-member">
 	<img src="../media/jeffreyzhang.jpg" class="member-image">
 	<div class="member-description">
@@ -52,6 +52,7 @@ draft: false
 		<p class="member-role">Hardware, App Guy</p>
 	</div>
 </div>
+<!-- Add yourself here -->
 ## Team Management
 
 Our team was split into two sub-teams, software and hardware. The hardware team was responsible for the physical design of the robot and testing the chosen parts remotely with help of the technicians.
