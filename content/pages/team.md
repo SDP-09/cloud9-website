@@ -49,7 +49,7 @@ draft: false
 	<img src="../media/jeffreyzhang.jpg" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Jeffrey Zhang</p>
-		<p class="member-role">Hardware, App Guy</p>
+		<p class="member-role">Hardware, Database, App Guy</p>
 	</div>
 </div>
 
