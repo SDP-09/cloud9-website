@@ -23,7 +23,7 @@ These parts come together to make an autonomous sanitising system for desk tops 
 
 Below are more in-depth descriptions of each sub-system.
 
-(include a uml sequence diagram here)
+![image](../media/stateDiagram.png)
 
 ### The Mobile App:
 
@@ -39,13 +39,13 @@ The bookings database stores all the specific data on the desks, including locat
 
 ### Navigation:
 
-The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo to the right. (remove the photo if animation).
+The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo below. (remove the photo if animation).
 
-
-![image](../media/swipe.png)
-
+![image](../media/RVIZ.PNG)
 
 - Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually. The animation … shows an example of the mapping in action.
+
+![image](../media/test_world_OGM.png)
 
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
