@@ -54,10 +54,10 @@ draft: false
 </div>
 
 <div class="team-member">
-	<img src="../media/janek_picture.png" class="member-image">
+	<img src="../media/picture_janek.png" class="member-image">
 	<div class="member-description">
 		<p class="member-name">Janek</p>
-		<p class="member-role">Software, Navigation</p>
+		<p class="member-role">Software, Navigation Guy</p>
 	</div>
 </div>
 
