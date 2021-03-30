@@ -45,8 +45,17 @@ It is possible in the future to integrate the app with the booking system that a
 
 ### **ClyDe Controller**
 This serves as a controller for staff to interact will ClyDe in various ways, such as telling him to start patrolling as well as to come back home.
+
 #### Features
 
-Displays diagnostic info.
+The controller displays information about ClyDe's status. This includes:
+- Battery Level
+- Reservoir Level
+- Current Location
+- Operation Log
+
+See the image below for a demonstration of the UI:
+
+![](../media/controller_ui.png)
 
 Can give instructions to ClyDe.
