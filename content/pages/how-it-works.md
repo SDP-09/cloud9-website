@@ -75,6 +75,8 @@ Parameters of the arm software are as follows:
 - **Height** - this is the height at which the arm will perform the cleaning motion at. The height of the table can be plugged into this parameter and the arm will work with it.
 - **waistRange** - this is the range of values that the waist will take when carrying out the swipes. By default we have set the range as -1 to 1 radians, with 6 swipes equally spaced in that range. This range cleans the desk we have all the way, and 6 swipes ensures the squeegee makes contact with everywhere on the desk. See the Figure 2 for a visualisation of how the limits work.
 ### The Mobile App:
+<img src="../media/app.png" align="right" style="margin: 30px 30px 20px 20px;" />
+
 Workflow
 When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
 Check-in:
@@ -85,7 +87,7 @@ If the user chooses to check out a table, the table will be marked “dirty” a
 Implementation
 Generally, the app is implemented using Android Studio with Kotlin. For each page of the app, there is a xml that defines the layout and a Kotlin file defines the activity.
 1. First page: On the welcome page of the app, we have a ClyDe symbol and a request button. Clicking on the request button will direct the users to function selection page.
-<img src="../media/app.png" align="right" style="margin: 30px 30px 20px 20px;" />
+
 2. Second page: On the function selection page, we have a check-in button and a check-out button. Clicking on them will direct the user to the corresponding functionality.
 3. Third page: On the check in page, the app will request the access to camera of the current device if being used for the first time. Once access is guaranteed, it will display the view from camera on the top half part of this page. The user need to put QR code inside this area. For the bottom half page, there are buttons with text on it showing the time duration that the user wishes to use the table.
 Once the QR code is successfully scanned and the time duration is selected. The App first checks if the status of table is free(availble), if yes, it will connect to the database and update the state field with occupied, time field with the expiration time; otherwise, the check-in for this table will be rejected This finishes the check-in procedure.
