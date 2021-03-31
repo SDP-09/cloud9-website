@@ -43,7 +43,7 @@ This is the base and core of the robot, providing essential functionality like l
 2. Pincher x100 Robot arm with cleaning tool:  <br />
 The Pincher x100 is a versatile arm. Through it the robot performs it’s essential cleaning function.  At the tip of the arm is our specially-designed cleaning tool, that takes in disinfectant that is pumped up via tubes on the arm.
 3. Battery:  <br />
-The Zeee 11.1V 8000maH Lipo Battery is high-capacity, and allows the robot to operate for several hours before needing to charge. 
+The Zeee 11.1V 8000maH Lipo Battery is high-capacity, and allows the robot to operate for several hours before needing to charge.
 4. Webcam:  <br />
 The C270 Logitech USB Webcam is powerful, yet lightweight enough to be carried on the robot arm. It provides high-resolution pictures that are suitable for QR-code recognition.
 5. Pump:  <br />
@@ -52,29 +52,40 @@ The 6-12V R385 DC Diaphragm Pump is a lightweight, small, low-volume pump with a
 This contains the disinfectant liquid. Attached on the inside is a non-contact liquid sensor to monitor disinfectant levels.
 
 
-## ROS2 
-The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007. 
+## ROS2
+The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007.
 ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Below is a subset of all the nodes that are running when ClyDe is active.
 ![image](../media/rosgraph.png)
 
 ## Webots Simulator
-Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development. 
-ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic. 
+Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development.
+ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic.
 Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferrable to writing controller software directly in webots. This is beacuse a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
 
 ### The Mobile App:
-
+Workflow
 When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
-
+Check-in:
 If the user chooses to check in a table, the table will be marked “occupied” as an indication of being used.
-
+Check-out:
 If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
 
-The app is implemented using Android Studio with Kotlin.
+Implementation
+Generally, the app is implemented using Android Studio with Kotlin. For each page of the app, there is a xml that defines the layout and a Kotlin file defines the activity.
+1. First page: On the welcome page of the app, we have a ClyDe symbol and a request button. Clicking on the request button will direct the users to function selection page.
+2. Second page: On the function selection page, we have a check-in button and a check-out button. Clicking on them will direct the user to the corresponding functionality.
+3. Third page: On the check in page, the app will request the access to camera of the current device if being used for the first time. Once access is guaranteed, it will display the view from camera on the top half part of this page. The user need to put QR code inside this area. For the bottom half page, there are buttons with text on it showing the time duration that the user wishes to use the table.
+Once the QR code is successfully scanned and the time duration is selected. The App will connect to the database and update the state field with occupied, time field with the expiration time. This finishes the check-in procedure.
+4. Third page: On the check out page, the app will display the view from camera on the top half part of this page. The user need to put QR code inside this area.
+Once the QR code is successfully scanned. The App will connect to the database and update the state field with dirty, time field with Null. This finishes the check-out procedure.
+
+
+
 
 ### The Database:
 
 The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
+There will be a program running in the background that keep accessing the database. It checks if there is any table being timed out by comparing the current time with expiration time.
 
 
 ### Navigation:
@@ -91,10 +102,10 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 
 - All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
 
-Most important Navigation decision: 
+Most important Navigation decision:
 
-Navigation must rely on a precomputed floor plan. This would either be created manually, or by using SLAM (Simultaneous localization and mapping). SLAM is creating or updating a map of an unknown environment while simultaneously keeping track of the robot’s location within it. After speaking with the expert Christopher McGreavy, we investigated two suggested methods for navigation: 
-- Method  1: using  SLAM  for  real-time  map-building and obstacle avoidance. 
+Navigation must rely on a precomputed floor plan. This would either be created manually, or by using SLAM (Simultaneous localization and mapping). SLAM is creating or updating a map of an unknown environment while simultaneously keeping track of the robot’s location within it. After speaking with the expert Christopher McGreavy, we investigated two suggested methods for navigation:
+- Method  1: using  SLAM  for  real-time  map-building and obstacle avoidance.
 - Method 2:  manually ‘pre-draw’ the map and use naive obstacle avoidance which involves 3 actions:  Turn left,turn right, or move backwards.
 
 As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded,  due to the difficulty of identifying tables on the map from LIDAR  data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
