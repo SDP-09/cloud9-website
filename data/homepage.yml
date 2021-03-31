@@ -26,22 +26,22 @@ feature:
     # feature item loop
     - name : "Autonomous navigation"
       icon : "ti-map-alt"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "Using its array of sensors, CLYDE can navigate through complex indoor spaces"
       
     # feature item loop
     - name : "Desk booking app"
       icon : "ti-mobile"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "Library visitors can easily check out desks, which will be cleaned by ClyDe after they are done"
       
     # feature item loop
     - name : "QR code scanning"
       icon : "ti-target"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "ClyDe scans each table he visits, identifying desk QR codes"
       
     # feature item loop
     - name : "Obstacle avoidance"
       icon : "ti-vector"
-      content : "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
+      content : "ClyDe navigates with grace, and will not collide with visitors or other obstacles"
              
 ################### Screenshot ########################
 screenshot:
@@ -59,7 +59,7 @@ call_to_action:
   enable : false
   title : "Ready to get started?"
   image : "images/cta.svg"
-  content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur."
+  content : "ClyDe helps make your space clean!"
   button:
     enable : true
     label : "Contact Us"

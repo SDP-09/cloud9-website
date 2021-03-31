@@ -119,7 +119,7 @@ As our robot operates around people and has a camera on it, this obviously raise
 * Process all images locally on the robot and delete them immediately. Besides the camera will only stay open when it is trying to scan the qr code and the scope of its sight will be very limited.
 * Design Clyde’s exterior to make it friendlier and be informative of its purpose.
 
-We understand that you don't want to be distracted when you are doing your work! We 
+We understand that you don't want to be distracted when you are doing your work! We will minimize the impact of the robot as much as we can!
 
 
 Your library can print out the following poster to let visitors know about ClyDe:

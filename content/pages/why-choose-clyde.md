@@ -23,9 +23,11 @@ You may have seen a large amount of assistive cleaning robots before -- but do t
 
 We carried out a complete series of analysis before bringing the product to market. This includes usability analysis. We conducted an experiment to gather the feedback from our potential customers. The experiment involves a questionnaire. There are seven multiple-choice questions and two short answer questions. The questions include various aspects from layout to logic. Below are the results of the experiment.
 
-![image](../media/Q3.png)
-![image](../media/Q4.png)
-![image](../media/Q7.png)
+<center><img src="../media/Q3.png" width="500" /></center>
+
+<center><img src="../media/Q4.png" width="500" /></center>
+
+<center><img src="../media/Q7.png" width="500" /></center>
 
 The general impression of the product is quite positive. 90% of the candidates give general positive feedback to the product. 95% of the candidates think this product is believable and reliable, meaning that there will be few difficulties when they use this product. 95% of the candidates also like the idea and find it relevant to their life. 
 The product may lack some innovation; only 53% of the candidates think this product is extremely or very unique. Since the product remains as a prototype currently, only 53% of the candidates find the layout very appealing with an additional 32% who think it is somewhat appealing. 
