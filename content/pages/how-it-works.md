@@ -25,7 +25,10 @@ These parts come together to make an autonomous sanitising system for desk tops 
 
 Below are more in-depth descriptions of each sub-system.
 
-![image](../media/stateDiagram.png)
+<img src="../media/stateDiagram.png" align="left" style="margin: 30px 30px 20px 20px;" />
+
+
+
 
 
 ## Clyde Components
