@@ -16,7 +16,7 @@ The current coronavirus pandemic has shown us just how important spaces such as 
 
 ## What can ClyDe do?
 
-<center><img src="../media/clydepicture.png" height="500"/></center>
+<center><img src="../media/clydepicture.png" width="500"/></center>
 
 ---
 
@@ -66,10 +66,11 @@ The controller displays information about ClyDe's status. This includes:
 
 See the image below for a demonstration of the UI:
 
-<center><img src="../media/controller_ui.png" width="700" /></center>
+<center><img src="../media/controller_ui.png" width="500" /></center>
 
 The controller can also be used to give instructions to ClyDe. These instructions are kept simple in order to keep ease of use high. The instructions include:
 - Start cleaning - this sets ClyDe off to begin patrolling and cleaning any desks that are marked as dirty.
 - Return home - this prompts ClyDe to return to his home position, whether it be to allow you to charge the battery, refill the reservoir or simply to turn him off.
 - Restart ClyDe - this restarts the system. In the case that there are technical issues, all you have to do is bring ClyDe to his home position and hit this button to reboot it all.
 
+{{< youtube JvrAZXzs0NY> }}
