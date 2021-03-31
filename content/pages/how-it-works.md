@@ -36,7 +36,7 @@ Below are more in-depth descriptions of each sub-system.
 
 ## Clyde Components
 
-<center><img src="../media/labeledClyde.png" width="500" /></center>
+<center><img src="../media/labeledClyde.png" width="300" /></center>
 
 1. Waffle Pi Turtlebot:   <br />
 This is the base and core of the robot, providing essential functionality like locomotion, and sensors. It is also home to a Raspberry Pi, ClyDe’s “brain”.  
@@ -81,11 +81,11 @@ The booking database is built based on mysql. The database will store all the sp
 
 The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo below. (remove the photo if animation).
 
-![image](../media/RVIZ.PNG)
+<center><img src="../media/RVIZ.PNG" width="300" /></center>
 
 - Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually.  The animation … shows an example of the mapping in action.
 
-![image](../media/test_world_OGM.png)
+<center><img src="../media/test_world_OGM.png" width="300" /></center>
 
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
@@ -99,7 +99,8 @@ Navigation must rely on a precomputed floor plan. This would either be created m
 
 As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded,  due to the difficulty of identifying tables on the map from LIDAR  data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
 
-![image](../media/navigation_decision.png)
+
+<center><img src="../media/evaluationn/navigation_decision.png" height="300"/></center>
 
 ### Computer Vision
 
@@ -109,9 +110,10 @@ Before any cleaning is performed, ClyDe will keep adjusting the angle of the cam
 
 1. Scanning QR code on desk.
 Firstly, ClyDe performs a zoom in function on the picture which separates the picture into small pieces, then it tries to detect any QR codes using pyzbar on each piece of them. Pyzbar is a python package for dealing with QR code, using the decode() function in this package, ClyDe retrieves the information from the QR code. Once ClyDe gets the information from the table , it checks if the current table number matches the desired one.
-![image](../media/evaluationn/6015.png)
 
-2. Detecting obstruction on desk.
+<center><img src="../media/evaluationn/6015.png" height="300"/></center>
+
+1. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
 ![image](../media/CannyEdge3.png)
 
