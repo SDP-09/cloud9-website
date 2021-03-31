@@ -56,7 +56,7 @@ This contains the disinfectant liquid. Attached on the inside is a non-contact l
 The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007. 
 ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Below is a subset of all the nodes that are running when ClyDe is active.
 
-<center><img src="../media/rosgraph.png" width="300" /></center>
+![image](../media/rosgraph.png)
 
 ## Webots Simulator
 Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development. 
@@ -101,7 +101,7 @@ Navigation must rely on a precomputed floor plan. This would either be created m
 As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded,  due to the difficulty of identifying tables on the map from LIDAR  data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
 
 
-<center><img src="../media/evaluationn/navigation_decision.png" height="300"/></center>
+<center><img src="../media/navigation_decision.png" height="300"/></center>
 
 ### Computer Vision
 
@@ -112,11 +112,12 @@ Before any cleaning is performed, ClyDe will keep adjusting the angle of the cam
 1. Scanning QR code on desk.
 Firstly, ClyDe performs a zoom in function on the picture which separates the picture into small pieces, then it tries to detect any QR codes using pyzbar on each piece of them. Pyzbar is a python package for dealing with QR code, using the decode() function in this package, ClyDe retrieves the information from the QR code. Once ClyDe gets the information from the table , it checks if the current table number matches the desired one.
 
-<center><img src="../media/evaluationn/6015.png" height="300"/></center>
+<center><img src="../media/evaluation/6015.png" height="300"/></center>
 
 1. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
-![image](../media/CannyEdge3.png)
+
+<center><img src="../media/CannyEdge3.png" height="300"/></center>
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 <center><img src="../media/illu3.jpg" height="300"/></center>
