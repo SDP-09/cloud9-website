@@ -34,7 +34,6 @@ Below are more in-depth descriptions of each sub-system.
 
 
 
-
 ## Clyde Components
 
 <center><img src="../media/labeledClyde.png" width="500" /></center>
@@ -91,6 +90,10 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
 - All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
+
+Most important Navigation decision: 
+
+![image](../media/navigation_decision.png)
 
 ### Computer Vision
 
