@@ -39,6 +39,8 @@ Since we were unable to create a physical system, a simulator was needed to test
 ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic.
 Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferrable to writing controller software directly in webots. This is beacuse a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
 
+---
+
 ## The Arm
 
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk (see the image processing section) and then carries out a series of movements to perform the sanitisation.
@@ -73,6 +75,8 @@ Parameters of the arm software are as follows:
 <center><img src="../media/fullArmMotion.png" width="500"/></center>
 <center>This image depicts the range within which the arm is capable of cleaning in.</center>
 
+---
+
 ## The Mobile App:
 
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
@@ -98,10 +102,15 @@ Implementation
 4. Check-out page: On the check out page, the app will display the view from camera on the top half part of this page. The user need to put QR code inside this area.
    Once the QR code is successfully scanned. The App will connect to the database and update the state field with dirty, time field with Null. This finishes the check-out procedure.
 
+---
+
 ## The Database:
 
 The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
 There will be a program running in the background that keep accessing the database. It checks if there is any table being timed out by comparing the current time with expiration time.
+
+
+---
 
 ## Navigation:
 
@@ -124,6 +133,8 @@ Navigation must rely on a precomputed floor plan. This would either be created m
 As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded, due to the difficulty of identifying tables on the map from LIDAR data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
 
 <center><img src="../media/navigation_decision.png" height="500"/></center>
+
+---
 
 ## Computer Vision
 
