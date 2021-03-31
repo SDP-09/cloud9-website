@@ -82,6 +82,9 @@ The second sub-team focused on navigation, which includes pathfinding, map-build
 The third sub-team focused on ClyDe app UI design and function build, which achieves booking and connecting to cloud database.
 While this organization proved useful for the first few weeks of the project, the hardware team soon ran out of tasks because of the simulated nature of the project. Luckily, we had as a team made sure that everyone were up to speed with what everyone else is doing through effective communication and weekly team meetings. This allowed the hardware team to assist software on numerous tasks, and made sure there was always someone ready to help out with any problems.
 
+![image](../media/SDP Gantt Chart.png)
+<center><img src="../media/SDP Gantt Chart.png" height="800"/></center>
+
 ## Development tools
 
 Our main task organisatation and assignment was done through Trello. This made it easy to delegate tasks to sub-teams, and to check on their progress. In our weekly team meetings, we reviewed the Trello tasks, their progress and assigned new ones.
