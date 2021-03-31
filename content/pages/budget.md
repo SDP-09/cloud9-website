@@ -13,6 +13,8 @@ draft: false
 
 ## Total System Cost
 
+---
+
 Below is a breakdown of the total cost of all components in the system. When including costs from setup, logistics and admin as well as profit, we project the system will be sold for £4,200. Since we have a singular main use case, which does not have much variation in it, we have decided that only a single price will be needed. 
 
 | Item                             | Quantity | Cost in £ |
@@ -33,6 +35,8 @@ Below is a breakdown of the total cost of all components in the system. When inc
 Additionally, we could also offer repairs, warranties and other support with appropriate costs.
 
 ## Budget
+
+---
 
 The team was given a budget of £200 to spend on the project. Below is a breakdown of how this was done.
 

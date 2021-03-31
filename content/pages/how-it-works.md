@@ -26,6 +26,8 @@ Below are more in-depth descriptions of each sub-system.
 
 ## ROS2
 
+---
+
 ![image](../media/rosgraph.png)
 
 <img src="../media/stateDiagram.png" align="left" style="margin: 30px 30px 20px 20px;" width ="200" />
@@ -34,6 +36,8 @@ The core software running on the robot is the Robot Operating System 2(ROS2). RO
 ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Above is a subset of all the nodes that are running when ClyDe is active.
 
 ## Webots Simulator
+
+---
 
 Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development.
 ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic.
@@ -48,7 +52,7 @@ Once positioned at the desired desk, the arm performs the cleaning motion itself
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table,
 disinfectant is distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
 
-See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasable. In practice, the malleable sponge would make up for the fluctuations of motion:
+See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasable. In practice, the malleable sponge would make up for the fluctuations in the motion of the arm:
 
 {{< youtube n0dsNzAbkx0 >}}
 

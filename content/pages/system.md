@@ -15,6 +15,8 @@ The current coronavirus pandemic has shown us just how important spaces such as 
 
 ## Clyde Components
 
+---
+
 <center><img src="../media/labeledClyde.png" width="600" /></center>
 
 1. Waffle Pi Turtlebot: <br />
@@ -67,6 +69,10 @@ First, users scan the QR code on the table when they arrive and start using it. 
 The second feature is to again scan the QR code, but this time once they have finished using the table and are leaving. This serves to let ClyDe know that the table needs to be cleaned.
 
 It is possible in the future to integrate the app with the booking system that a library might already have in place - for instance SeatEd which is used at Edinburgh University's Main Library - allowing for a more smooth user experience.
+
+## How does this system come into contact with staff?
+
+---
 
 ### **ClyDe Controller**
 

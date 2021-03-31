@@ -92,6 +92,8 @@ draft: false
 
 ## Team Management
 
+---
+
 Our team was split into two sub-teams, software and hardware. Each sub-team had a leader that coordinated tasks and made sure progress was on track and blockers were effectively dealt with.
 
 The hardware team was responsible for the physical design of the robot and testing the chosen parts remotely with help of the technicians. Major tasks included designing the cleaning tool and how it would be connected to and operated.
@@ -103,6 +105,8 @@ While this organization proved useful for the first few weeks of the project, th
 
 
 ## Development tools
+
+---
 
 Our main task organisation and assignment was done through Trello. This made it easy to delegate tasks to sub-teams, and to check on their progress. In our weekly team meetings, we reviewed the Trello tasks, their progress and assigned new ones.
 
