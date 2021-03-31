@@ -77,14 +77,14 @@ Parameters of the arm software are as follows:
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
 
 Workflow
-When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
-Check-in:
-If the user chooses to check in a table, the table will be marked “occupied” as an indication of being used.
-Check-out:
-If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
+- When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
+- Check-in:
+- If the user chooses to check in a table, the table will be marked “occupied” as an indication of being used.
+- Check-out:
+- If the user chooses to check out a table, the table will be marked “dirty” as an indication of needs cleaning.
 
 Implementation
-Generally, the app is implemented using Android Studio with Kotlin. For each page of the app, there is a xml that defines the layout and a Kotlin file defines the activity.
+- Generally, the app is implemented using Android Studio with Kotlin. For each page of the app, there is a xml that defines the layout and a Kotlin file defines the activity.
 1. Welcome page: On the welcome page of the app, we have a ClyDe symbol and a request button. Clicking on the request button will direct the users to function selection page.
 
 2. Selection page: On the function selection page, we have a check-in button and a check-out button. Clicking on them will direct the user to the corresponding functionality.
