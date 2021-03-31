@@ -141,6 +141,9 @@ Firstly, ClyDe performs a zoom in function on the picture which separates the pi
 
 <center><img src="../media/evaluation/6015.png" width="500"/></center>
 
+
+[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
+
 1. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
 
