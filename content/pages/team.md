@@ -81,7 +81,7 @@ draft: false
     <img src="../media/team-images/sean.png" class="member-image">
     <div class="member-description">
         <p class="member-name">Sean</p>
-        <p class="member-role">Navigation Guy</p>
+        <p class="member-role">Software, Navigation Guy</p>
     </div>
 </div>
 
