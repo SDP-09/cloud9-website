@@ -13,14 +13,6 @@ draft: false
 
 
 The current coronavirus pandemic has shown us just how important spaces such as libraries and offices are, but also how important and difficult it is to keep them clean and safe. ClyDe is an autonomous surface-cleaning robot meant to be deployed in these highly-trafficked spaces. It disinfects desks after they have been used, making them safe. This will assist cleaner's jobs by helping with a monotonous and repetitive task, allowing them to spend their time elsewhere.
-
-## What can ClyDe do?
-
-<center><img src="../media/clydepicture.png" width="500"/></center>
-
----
-
-
 ## Clyde Components
 
 <center><img src="../media/labeledClyde.png" width="300" /></center>
@@ -38,6 +30,11 @@ The 6-12V R385 DC Diaphragm Pump is a lightweight, small, low-volume pump with a
 6. Reservoir:  <br />
 This contains the disinfectant liquid. Attached on the inside is a non-contact liquid sensor to monitor disinfectant levels.
 
+## What can ClyDe do?
+
+<center><img src="../media/clydepicture.png" width="500"/></center>
+
+---
 
 ### **Surface Disinfecting**
 
@@ -48,6 +45,9 @@ ClyDe navigates throughout the environment and disinfects the surface of any des
 ClyDe will move to a target desk and scan the QR code on that desk in order to confirm it is the correct one. ClyDe then uses his arm which has a squeegee utensil with a sponge on the end to clean the desk. Disinfectant is absorbed into the sponge using a pump and is then spread over the table using ClyDe's cleaning arm.
 
 ClyDe is easy to work with and maintain, all that is required after deployment is to keep the battery charged and keep the reservoir of disinfectant full.
+
+### **Autonomous Navigation**
+Using its array of sensors, CLyDe is able to map and navigate complex spaces, avoiding unforseen obstacles along the way. When ClyDe arrives, we will send a technician to set up the system for you. The technician will first manually drive the robot around the deisgnated area, and use an intuitive UI to mark down the positions of desks. This only needs to de done once as long as the rooms in question do not change. After this, ClyDe is able to move from desk to desk, cleaning as he goes!
 
 ## How does this system come into contact with users?
 
@@ -61,10 +61,9 @@ The main way users interact with ClyDe is through our ClyDe Companion app.
 
 
 #### Features
+Using the app is quick and easy, start by downloading the ClyDe Companion app from the Play store!
 
-Users are only concerned with two features from the app.
-
-The first is scanning the QR code on the table when they arrive and start using it. Since the QR code will contain the ID of the table, this allows the user to verify they are at the right table if they have booked it. This serves to let ClyDe know that the table is currently being used.
+First, users scan the QR code on the table when they arrive and start using it. Since the QR code will contain the ID of the table, this allows the user to verify they are at the right table if they have booked it. This serves to let ClyDe and other users know that the table is currently being used.
 
 The second feature is to again scan the QR code, but this time once they have finished using the table and are leaving. This serves to let ClyDe know that the table needs to be cleaned.
 
@@ -93,3 +92,4 @@ The controller can also be used to give instructions to ClyDe. These instruction
 - Restart ClyDe - this restarts the system. In the case that there are technical issues, all you have to do is bring ClyDe to his home position and hit this button to reboot it all.
 
 {{< youtube JvrAZXzs0NY> }}
+
