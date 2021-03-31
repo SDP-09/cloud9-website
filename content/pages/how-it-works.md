@@ -29,7 +29,7 @@ Below are more in-depth descriptions of each sub-system.
 
 ![image](../media/rosgraph.png)
 
-<img src="../media/stateDiagram.png" align="right" style="margin: 30px 30px 20px 20px;" width ="200" />
+<img src="../media/stateDiagram.png" align="left" style="margin: 30px 30px 20px 20px;" width ="200" />
 
 
 
@@ -107,11 +107,10 @@ There will be a program running in the background that keep accessing the databa
 
 The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo below. (remove the photo if animation).
 
-<center><img src="../media/RVIZ.PNG" width="500" /></center>
+<img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="450" />
+<img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 80px 0px;" width="550" />
 
 - Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually.  The animation … shows an example of the mapping in action.
-
-<center><img src="../media/test_world_OGM.png" width="500" /></center>
 
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
