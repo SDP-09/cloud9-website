@@ -55,7 +55,6 @@ disinfectant would be distributed to the sponge throughout the whole cleaning mo
 
 Cleaning video:
 
-[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
 
 The webots_ros2 package contains the TrajectoryFollower class that implements the 'follow_joint_trajectory' ROS2 action. Using this we were able to construct a simple controller for the arm. The controller takes a list of joint states, velocities, accelerations and time to complete the action.
 
@@ -147,3 +146,6 @@ After the first step is checked, the robot will use a picture of the whole table
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 <center><img src="../media/illu3.jpg" width="300"/></center>
+
+
+[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
