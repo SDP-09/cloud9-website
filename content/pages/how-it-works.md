@@ -105,8 +105,6 @@ There will be a program running in the background that keep accessing the databa
 
 ### Navigation:
 
-The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environment while his onboard Raspberry Pi computer to determines navigation routes - as seen in the photo below. (remove the photo if animation).
-
 <img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="500" />
 <img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 80px 0px;" width="500" />
 
@@ -141,7 +139,7 @@ Firstly, ClyDe performs a zoom in function on the picture which separates the pi
 1. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
 
-<center><img src="../media/CannyEdge3.png" width="500"/></center>
+<center><img src="../media/CannyEdge3.png" width="527"/></center>
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 <center><img src="../media/illu3.jpg" width="300"/></center>
