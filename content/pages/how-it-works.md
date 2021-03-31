@@ -77,7 +77,7 @@ Parameters of the arm software are as follows:
 
 ---
 
-## The Mobile App:
+## The Mobile App
 
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
 
@@ -104,7 +104,7 @@ Implementation
 
 ---
 
-## The Database:
+## The Database
 
 The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
 There will be a program running in the background that keep accessing the database. It checks if there is any table being timed out by comparing the current time with expiration time.
@@ -112,7 +112,7 @@ There will be a program running in the background that keep accessing the databa
 
 ---
 
-## Navigation:
+## Navigation
 
 <img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="500" />
 <img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 0px 0px;" width="500" />
