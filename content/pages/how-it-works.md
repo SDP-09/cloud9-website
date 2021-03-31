@@ -52,8 +52,8 @@ Once positioned at the desired desk, the arm performs the cleaning motion itself
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table, 
 disinfectant is distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
 
-Cleaning video:
-
+See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasable. In practice, the malleable sponge would make up for the fluctuations of motion:
+[![](http://img.youtube.com/vi/JvrAZXzs0NY/0.jpg)](https://youtu.be/n0dsNzAbkx0)
 
 The webots_ros2 package contains the TrajectoryFollower class that implements the 'follow_joint_trajectory' ROS2 action. Using this we were able to construct a simple controller for the arm. The controller takes a list of joint states, velocities, accelerations and time to complete the action.
 
