@@ -47,11 +47,10 @@ Especially useful is the webots_ros2_turtlebot package which provides an interfa
 
 ## The Arm
 
-Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 (?) robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk, then carries out a series of movements to perform the sanitisation.
-<center><img src="../media/fullArmMotion.png" width="500"/></center>
+Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk (see the image processing section) and then carries out a series of movements to perform the sanitisation.
 
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table, 
-disinfectant would be distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
+disinfectant is distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
 
 Cleaning video:
 
@@ -63,10 +62,9 @@ The [ikpy](https://libraries.io/pypi/ikpy) python package was used to calculate 
 The software was created in a way such that the height of the cleaning motion as well as the limits of the waist movement is generalised. This means the arm cleaning motions can be adapted to any size table, given that the dimensions are suitable for the arm's reach.
 
 <center><img src="../media/swipe.png" width="500"/></center>
+<center>The image above depicts a single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with **noOfPoints** parameter set to 10.</center>
 
-The image above depicts a single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with **noOfPoints** parameter set to 10.
-
-The cleaning motion consists of ‘swipes’. A swipe is defined as the act of the arm rubbing against the  table along the whole length in one direction. The swipe has a set start and end point, seen in Figure 1 below as the red dots. Several points are then generated in between the red dots, so the arm goes across the table while keeping it’s end effector against the surface the whole time. The number of these intermediary points (shown as the black dots in the image above) is generalised and can be changed as a parameter. In Figure 1 there are 10 points in total (meaning 8 intermediary points), which is how the robot is currently set up.
+The cleaning motion consists of ‘swipes’. A swipe is defined as the act of the arm rubbing against the  table along the whole length in one direction. The swipe has a set start and end point, seen in the image above as the red dots. Several points are then generated in between the red dots, so the arm goes across the table while keeping it’s end effector against the surface the whole time. The number of these intermediary points (shown as the black dots in the image above) is generalised and can be changed as a parameter. In the image there are 10 points in total (meaning 8 intermediary points), which is how the robot is currently set up.
 
 The joint angles are only computed for one swipe in practice. This essentially means the inverse kinematics only really have to work on a 2D plane, since the y value is constant. The joint angles that are calculated for this swipe are then re-used with different waist values in order to swipe across the whole surface. This minimises the number of inverse kinematics calculations that have to be performed.
 
@@ -74,7 +72,11 @@ Parameters of the arm software are as follows:
 - **timeToDoOneSwipe** - this is the amount of time the arm takes to swipe across one length of the table (as seen above, from red dot to red dot). The value we settled on is around 10 seconds for now. Bringing the time too low reduces the stability as the in-built ros2 controller for the arm struggles to control the inertia when carrying out the trajectory.
 - **noOfPoints** - this is the total number of points a swipe will have (including the red dots). As previously mentioned, we set this to 10 to get an accurate trajectory across the surface.
 - **Height** - this is the height at which the arm will perform the cleaning motion at. The height of the table can be plugged into this parameter and the arm will work with it.
-- **waistRange** - this is the range of values that the waist will take when carrying out the swipes. By default we have set the range as -1 to 1 radians, with 6 swipes equally spaced in that range. This range cleans the desk we have all the way, and 6 swipes ensures the squeegee makes contact with everywhere on the desk. See the Figure 2 for a visualisation of how the limits work.
+- **waistRange** - this is the range of values that the waist will take when carrying out the swipes. By default we have set the range as -1 to 1 radians, with 6 swipes equally spaced in that range. This range cleans the desk we have all the way, and 6 swipes ensures the squeegee makes contact with everywhere on the desk. See the image below for a visualisation of how the limits work.
+
+<center><img src="../media/fullArmMotion.png" width="500"/></center>
+<center>This image depicts the range within which the arm is capable of cleaning in.</center>
+
 
 ## The Mobile App:
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
