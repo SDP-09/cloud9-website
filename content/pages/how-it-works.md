@@ -62,7 +62,7 @@ The [ikpy](https://libraries.io/pypi/ikpy) python package was used to calculate 
 The software was created in a way such that the height of the cleaning motion as well as the limits of the waist movement is generalised. This means the arm cleaning motions can be adapted to any size table, given that the dimensions are suitable for the arm's reach.
 
 <center><img src="../media/swipe.png" width="500"/></center>
-<center>The image above depicts a single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with **noOfPoints** parameter set to 10.</center>
+<center>The image above depicts a single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with <b>noOfPoints</b> parameter set to 10.</center>
 
 The cleaning motion consists of ‘swipes’. A swipe is defined as the act of the arm rubbing against the  table along the whole length in one direction. The swipe has a set start and end point, seen in the image above as the red dots. Several points are then generated in between the red dots, so the arm goes across the table while keeping it’s end effector against the surface the whole time. The number of these intermediary points (shown as the black dots in the image above) is generalised and can be changed as a parameter. In the image there are 10 points in total (meaning 8 intermediary points), which is how the robot is currently set up.
 
