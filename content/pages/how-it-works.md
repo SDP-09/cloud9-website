@@ -147,3 +147,6 @@ After the first step is checked, the robot will use a picture of the whole table
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
 <center><img src="../media/illu3.jpg" width="300"/></center>
+
+
+[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
