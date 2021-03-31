@@ -16,6 +16,8 @@ The current coronavirus pandemic has shown us how important spaces life librarie
 
 ## What can ClyDe do?
 
+<center><img src="../media/clydepicture.png" height="500"/></center>
+
 ---
 
 ### **Surface Disinfecting**

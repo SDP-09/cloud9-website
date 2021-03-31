@@ -106,3 +106,9 @@ Our app works, however it is not as feature complete as we would have liked it t
 As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi wesend out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
 ### General Hardware improvements.
 Since we were not able to create a physical robot, there are naturally going to be some flaws in our design that will come to light once it is actually built.  We estimate that these kind of issues will not require a complete overhaul of the design, and so this point should not be much of an issue, particularly considering that our design is a prototype.
+
+
+### Ethics
+Our team met with an ethics expert, and we TODO
+Your library can print out the following poster to let visitors know about ClyDe:
+<center><img src="../media/clyde-poster-1.png" height="700"/></center>
