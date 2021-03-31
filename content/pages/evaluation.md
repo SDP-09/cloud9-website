@@ -11,7 +11,7 @@ description: "This is meta description"
 draft: false
 ---
 
-ClyDe contains several subsystems(Described in "System" and "How it works" sections). Each of these have been thourogly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Havign confirmed the reliability and functionality of each subsystem, we could more easily put them together and resolve errors quickly.The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. 
+ClyDe contains several subsystems (described in the "System" and "How it works" sections). Each of these have been thoroughly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Having confirmed the reliability and functionality of each subsystem, we could more easily integrate these and resolve any errors. The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. 
 
 
 ## Navigation
@@ -79,7 +79,7 @@ ClyDe relies on QR codes attached to tables to confirm it's location and update 
 | 60           | 15             | yes      |
 
 
-As can be seen from this table, QR detection is quite reliant on angle and distance. The routine functions best when at a steep angle(looking at the code from above), and is close to the code. 
+As can be seen from this table, QR detection is quite reliant on angle and distance. The routine fonctions best when at a steep angle(looking at the code from above), and is close to the code. 
 
 # Shortcomings and Attempted Solutions
 
@@ -101,14 +101,26 @@ There are aspects of the robot that we were not able to test since we were not w
 ### Scaled up version.
 Currently, we are using the Robot is Waffle Pi as the base for ClyDe. In reality, another base would have to be used since the Waffle Pi is too short to house an arm that could reach on top of a table. This base could be custom built (ie. 3D Printed) since it would not have to carry particularly heavy loads.
 ### More user friendly App.
-Our app works, however it is not as feature complete as we would have liked it to be for the full product. Given time, it would be simple to implement many important features that would improve user experience, such as:  Text-to-Speech for the visually impaired, ensuring existing screen-readers work, colour blind settings and ensuring font readability. While explicitly made for the Web, the Web Content Accessibility Guidelines(WCAG) 2.1 will be a useful reference for achieving accessibility for a mobile app as well. (W3C,2018)
+Our app works, however it is not as feature complete as we would have liked it to be for the full product. Given time, it would be simple to implement many important features that would improve user experience, such as:  Text-to-Speech for the visually impaired, ensuring existing screen-readers work, colourblind settings and ensuring font readability. While explicitly made for the Web, the Web Content Accessibility Guidelines(WCAG) 2.1 will be a useful referencefor achieving accessibility for a mobile app as well. (W3C,2018)
 ### Web-app for staff to interface with ClyDe.
-As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi we send out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
+As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi wesend out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
 ### General Hardware improvements.
 Since we were not able to create a physical robot, there are naturally going to be some flaws in our design that will come to light once it is actually built.  We estimate that these kind of issues will not require a complete overhaul of the design, and so this point should not be much of an issue, particularly considering that our design is a prototype.
 
 
 ### Ethics
-Our team met with an ethics expert, and we TODO
+Our team met with an ethics expert, and we wanted to ensure that the ethics we planned for at the beginning of the project held up. There are several occasions where ethical issues could arise. However, we will prevent any personal data being abused from our system!
+
+As our robot operates around people and has a camera on it, this obviously raises privacy concerns to them. But don't worry! We will take a series of measures to address the concerns!
+
+* Follow all GDPR rules to maximise privacy.
+* Have a clear privacy policy in the app. This includes: We will not implement any login system to store any personal information of the app users
+* Add a light to the camera that lights up when the camera is active.
+* Process all images locally on the robot and delete them immediately. Besides the camera will only stay open when it is trying to scan the qr code and the scope of its sight will be very limited.
+* Design Clyde’s exterior to make it friendlier and be informative of its purpose.
+
+We understand that you don't want to be distracted when you are doing your work! We will minimize the impact of the robot as much as we can!
+
+
 Your library can print out the following poster to let visitors know about ClyDe:
 <center><img src="../media/clyde-poster-1.png" height="700"/></center>
