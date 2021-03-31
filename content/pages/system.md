@@ -15,6 +15,8 @@ The current coronavirus pandemic has shown us just how important spaces such as 
 
 ## Clyde Components
 
+---
+
 <center><img src="../media/labeledClyde.png" width="600" /></center>
 
 1. Waffle Pi Turtlebot: <br />
