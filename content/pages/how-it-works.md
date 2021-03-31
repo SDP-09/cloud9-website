@@ -47,6 +47,8 @@ Especially useful is the webots_ros2_turtlebot package which provides an interfa
 
 ## The Arm
 
+[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
+
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk (see the image processing section) and then carries out a series of movements to perform the sanitisation.
 
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table, 
@@ -140,9 +142,6 @@ Before any cleaning is performed, ClyDe will keep adjusting the angle of the cam
 Firstly, ClyDe performs a zoom in function on the picture which separates the picture into small pieces, then it tries to detect any QR codes using pyzbar on each piece of them. Pyzbar is a python package for dealing with QR code, using the decode() function in this package, ClyDe retrieves the information from the QR code. Once ClyDe gets the information from the table , it checks if the current table number matches the desired one.
 
 <center><img src="../media/evaluation/6015.png" width="500"/></center>
-
-
-[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
 
 1. Detecting obstruction on desk.
 After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it.  For obstruction detection,  ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
