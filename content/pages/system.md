@@ -89,4 +89,5 @@ The controller can also be used to give instructions to ClyDe. These instruction
 - Return home - this prompts ClyDe to return to his home position, whether it be to allow you to charge the battery, refill the reservoir or simply to turn him off.
 - Restart ClyDe - this restarts the system. In the case that there are technical issues, all you have to do is bring ClyDe to his home position and hit this button to reboot it all.
 
+Mapping tutorial we made:
 [![](http://img.youtube.com/vi/JvrAZXzs0NY/0.jpg)](http://www.youtube.com/watch?v=JvrAZXzs0NY "Mapping Tutorial")
