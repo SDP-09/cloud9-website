@@ -48,7 +48,7 @@ ClyDe is easy to work with and maintain, all that is required after deployment i
 
 ### **Autonomous Navigation**
 
-Using its array of sensors, CLyDe is able to map and navigate complex spaces, avoiding unforseen obstacles along the way. When ClyDe arrives, we will send a technician to set up the system for you. The technician will first manually drive the robot around the deisgnated area, and use an intuitive UI to mark down the positions of desks. This only needs to de done once as long as the rooms in question do not change. After this, ClyDe is able to move from desk to desk, cleaning as he goes!
+Using its array of sensors, CLyDe is able to map and navigate complex spaces, avoiding unforeseen obstacles along the way. When ClyDe arrives, we will send a technician to set up the system for you. The technician will first manually drive the robot around the designated area, and use an intuitive UI to mark down the positions of desks. This only needs to de done once as long as the rooms in question do not change. After this, ClyDe is able to move from desk to desk, cleaning as he goes!
 
 ## How does this system come into contact with users?
 

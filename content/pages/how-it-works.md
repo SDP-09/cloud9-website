@@ -33,15 +33,15 @@ Below are more in-depth descriptions of each sub-system.
 <img src="../media/stateDiagram.png" align="left" style="margin: 30px 30px 20px 20px;" width ="200" />
 
 The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007.
-ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Above is a subset of all the nodes that are running when ClyDe is active.
+ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in parallel, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Above is a subset of all the nodes that are running when ClyDe is active.
 
 ## Webots Simulator
 
 ---
 
-Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its enviroment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development.
-ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. Tha package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic.
-Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferrable to writing controller software directly in webots. This is beacuse a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
+Since we were unable to create a physical system, a simulator was needed to test our robot. Webots was used for this, as it is easy to use and integrates with ROS2 well. Webots makes changing the robot or its environment quick and simple. This is especially useful if you want to test new features, or repeat a test many times. In these ways the simulator is superior to a physical system for development.
+ROS2 integration happens through the webots-ros2 package, that provides an interface between the two. The package discovers important components like motors and sensors in Webots, and makes sure they subscribe or publish to the appropriate topics in ROS2. For example, webots_ros2 discovers ClyDe's camera, and makes sure it publishes to the 'camera/image_raw' topic.
+Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferable to writing controller software directly in webots. This is because a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
 
 ## The Arm
 
@@ -52,7 +52,7 @@ Once positioned at the desired desk, the arm performs the cleaning motion itself
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table,
 disinfectant is distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
 
-See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasable. In practice, the malleable sponge would make up for the fluctuations in the motion of the arm:
+See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasible. In practice, the malleable sponge would make up for the fluctuations in the motion of the arm:
 
 {{< youtube n0dsNzAbkx0 >}}
 
@@ -101,7 +101,7 @@ Implementation
 
 2. Selection page: On the function selection page, we have a check-in button and a check-out button. Clicking on them will direct the user to the corresponding functionality.
 3. Check-in page: On the check in page, the app will request the access to camera of the current device if being used for the first time. Once access is guaranteed, it will display the view from camera on the top half part of this page. The user need to put QR code inside this area. For the bottom half page, there are buttons with text on it showing the time duration that the user wishes to use the table.
-   Once the QR code is successfully scanned and the time duration is selected. The App first checks if the status of table is free(availble), if yes, it will connect to the database and update the state field with occupied, time field with the expiration time; otherwise, the check-in for this table will be rejected This finishes the check-in procedure.
+   Once the QR code is successfully scanned and the time duration is selected. The App first checks if the status of table is free (available), if yes, it will connect to the database and update the state field with occupied, time field with the expiration time; otherwise, the check-in for this table will be rejected This finishes the check-in procedure.
 
 4. Check-out page: On the check out page, the app will display the view from camera on the top half part of this page. The user need to put QR code inside this area.
    Once the QR code is successfully scanned. The App will connect to the database and update the state field with dirty, time field with Null. This finishes the check-out procedure.
@@ -131,7 +131,7 @@ Most important Navigation decision:
 Navigation must rely on a precomputed floor plan. This would either be created manually, or by using SLAM (Simultaneous localization and mapping). SLAM is creating or updating a map of an unknown environment while simultaneously keeping track of the robot’s location within it. After speaking with the expert Christopher McGreavy, we investigated two suggested methods for navigation:
 
 - Method 1: using SLAM for real-time map-building and obstacle avoidance.
-- Method 2: manually ‘pre-draw’ the map and use naive obstacle avoidance which involves 3 actions: Turn left,turn right, or move backwards.
+- Method 2: manually ‘pre-draw’ the map and use naïve obstacle avoidance which involves 3 actions: Turn left, turn right, or move backwards.
 
 As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded, due to the difficulty of identifying tables on the map from LIDAR data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
 

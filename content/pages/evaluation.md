@@ -22,7 +22,7 @@ A key feature of ClyDe is being able to navigate from one place to another in a 
 
 | Table | Goal Pose            | Average Displacement  | Success |
 | ----- | -------------------- | --------------------- | ------- |
-| 1     | 0.35 0.90 0.70 0.70  | 0.14 0.143            | 5/5     |
+| 1     | 0.35 0.90 0.70 0.70  | 0.14 0.14             | 5/5     |
 | 2     | -1.20 0.50 0.70 0.70 | 0.13  0.64            | 4/5     |
 | 3     | 0.3 -4.7 0.0 1.0     | 0.21  0.11            | 4/5     |
 | 4     | 0.3 -3.7 0.0 1.0     | 0.11 0.21             | 5/5     |
@@ -62,7 +62,7 @@ As ClyDe is currently not able to clean desks that have large obstructions on th
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | low                   | Success     |
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
-As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. Still, this means that in the future we could take more time to fine-tune the algorithm's parameters to achieve even better results. ClyDe could also be equipped with a small torch in future versions to help standardize lighting conditions.
+As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstructions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditions are known to affect computer vision algorithms in various ways. Still, this means that in the future we could take more time to fine-tune the algorithm's parameters to achieve even better results. ClyDe could also be equipped with a small torch in future versions to help standardize lighting conditions.
 
 ## QR Code detection
 
@@ -85,7 +85,7 @@ ClyDe relies on QR codes attached to tables to confirm it's location and update 
 | 60           | 10          | yes      |
 | 60           | 15          | yes      |
 
-As can be seen from this table, QR detection is quite reliant on angle and distance. The routine fonctions best when at a steep angle(looking at the code from above), and is close to the code. This data was later used to inform decisions on how to angle the arm to best detect the QR codes.
+As can be seen from this table, QR detection is quite reliant on angle and distance. The routine functions best when at a steep angle(looking at the code from above), and is close to the code. This data was later used to inform decisions on how to angle the arm to best detect the QR codes.
 
 # Shortcomings and Attempted Solutions
 
@@ -114,15 +114,15 @@ There are aspects of the robot that we were not able to test since we were not w
 
 ### Scaled up version.
 
-Currently, we are using the Robot is Waffle Pi as the base for ClyDe. In reality, another base would have to be used since the Waffle Pi is too short to house an arm that could reach on top of a table. This base could be custom built (ie. 3D Printed) since it would not have to carry particularly heavy loads.
+Currently, we are using the Robot is Waffle Pi as the base for ClyDe. In reality, another base would have to be used since the Waffle Pi is too short to house an arm that could reach on top of a table. This base could be custom built (i.e. 3D Printed) since it would not have to carry particularly heavy loads.
 
 ### More user friendly App.
 
-Our app works, however it is not as feature complete as we would have liked it to be for the full product. Given time, it would be simple to implement many important features that would improve user experience, such as: Text-to-Speech for the visually impaired, ensuring existing screen-readers work, colourblind settings and ensuring font readability. While explicitly made for the Web, the Web Content Accessibility Guidelines(WCAG) 2.1 will be a useful referencefor achieving accessibility for a mobile app as well. (W3C,2018)
+Our app works, however it is not as feature complete as we would have liked it to be for the full product. Given time, it would be simple to implement many important features that would improve user experience, such as: Text-to-Speech for the visually impaired, ensuring existing screen-readers work, colour-blind settings and ensuring font readability. While explicitly made for the Web, the Web Content Accessibility Guidelines(WCAG) 2.1 will be a useful reference for achieving accessibility for a mobile app as well. (W3C,2018)
 
 ### Web-app for staff to interface with ClyDe.
 
-As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi wesend out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
+As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi we send out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
 
 ### General Hardware improvements.
 
