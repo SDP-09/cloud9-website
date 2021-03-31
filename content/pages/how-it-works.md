@@ -19,18 +19,17 @@ draft: false
 - A database that holds the locations of all tables, their sizes and colours.
 - An arm that is attached to ClyDe that cleans the desk.
 - An accompanying app that facilitates desk booking.
-- A Raspberry Pi comtroller computer.
+- A Raspberry Pi controller computer.
 
 These parts come together to make an autonomous sanitising system for desk tops and other flat surfaces in spaces such as libraries.
 
 Below are more in-depth descriptions of each sub-system.
 
-<img src="../media/stateDiagram.png" align="left" style="margin: 30px 30px 20px 20px;" />
+<img src="../media/stateDiagram.png" align="right" style="margin: 30px 30px 20px 20px;" />
 
 <br>
 <br>
 <br>
-
 
 
 
@@ -91,6 +90,16 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 - Clyde uses the Navigation2 ‘navigation stack’ - driven by the A* search algorithm - to move between desks, while LIDAR helps Clyde detect and avoid obstacles, both stationary and moving.
 
 - All of the above is handled by a package of automatic python scripts, meaning Clyde can turn on and go all by himself. These scripts tell Clyde where to go by querying - using WiFi - Clyde’s accompanying database that holds the positions of all tables, this information is then published using a ROS2 action client.
+
+Most important Navigation decision: 
+
+Navigation must rely on a precomputed floor plan. This would either be created manually, or by using SLAM (Simultaneous localization and mapping). SLAM is creating or updating a map of an unknown environment while simultaneously keeping track of the robot’s location within it. After speaking with the expert Christopher McGreavy, we investigated two suggested methods for navigation: 
+- Method  1: using  SLAM  for  real-time  map-building and obstacle avoidance. 
+- Method 2:  manually ‘pre-draw’ the map and use naive obstacle avoidance which involves 3 actions:  Turn left,turn right, or move backwards.
+
+As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinates must be hard-coded,  due to the difficulty of identifying tables on the map from LIDAR  data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
+
+![image](../media/navigation_decision.png)
 
 ### Computer Vision
 
