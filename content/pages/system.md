@@ -15,7 +15,7 @@ draft: false
 The current coronavirus pandemic has shown us just how important spaces such as libraries and offices are, but also how important and difficult it is to keep them clean and safe. ClyDe is an autonomous surface-cleaning robot meant to be deployed in these highly-trafficked spaces. It disinfects desks after they have been used, making them safe. This will assist cleaner's jobs by helping with a monotonous and repetitive task, allowing them to spend their time elsewhere.
 ## Clyde Components
 
-<center><img src="../media/labeledClyde.png" width="300" /></center>
+<center><img src="../media/labeledClyde.png" width="600" /></center>
 
 1. Waffle Pi Turtlebot:   <br />
 This is the base and core of the robot, providing essential functionality like locomotion, and sensors. It is also home to a Raspberry Pi, ClyDe’s “brain”.  
@@ -31,8 +31,6 @@ The 6-12V R385 DC Diaphragm Pump is a lightweight, small, low-volume pump with a
 This contains the disinfectant liquid. Attached on the inside is a non-contact liquid sensor to monitor disinfectant levels.
 
 ## What can ClyDe do?
-
-<center><img src="../media/clydepicture.png" width="500"/></center>
 
 ---
 
