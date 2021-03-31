@@ -14,7 +14,7 @@ feature:
   title : "Key features"
   feature_item:
     # feature item loop
-    - name : "Increase safty"
+    - name : "Increase safety"
       icon : "ti-heart"
       content : "Reduce the contact points for workers in your building"
       
