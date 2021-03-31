@@ -74,7 +74,7 @@ Parameters of the arm software are as follows:
 - **Height** - this is the height at which the arm will perform the cleaning motion at. The height of the table can be plugged into this parameter and the arm will work with it.
 - **waistRange** - this is the range of values that the waist will take when carrying out the swipes. By default we have set the range as -1 to 1 radians, with 6 swipes equally spaced in that range. This range cleans the desk we have all the way, and 6 swipes ensures the squeegee makes contact with everywhere on the desk. See the Figure 2 for a visualisation of how the limits work.
 ### The Mobile App:
-<img src="../media/app.png" align="right" style="margin: 30px 30px 20px 20px;" />
+<img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
 
 Workflow
 When a user scans the QR code through our app, the app will connect to the database running in the background and update the status of the corresponding table.
