@@ -45,12 +45,10 @@ ROS2 integration happens through the webots-ros2 package, that provides an inter
 Especially useful is the webots_ros2_turtlebot package which provides an interface especially made for the Turtlebot 3, as well as several examples on how to use the Turtlebot 3 for map-building and navigation. Integrating ROS2 and Webots this way is preferrable to writing controller software directly in webots. This is beacuse a physical system could inherit a large part of the software written using ROS2 because it is used by most robots, including the Turtlebot 3. Webots controllers cannot do this, and would need to be rewritten using ROS2.
 
 
-### The Arm
+## The Arm
 
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 (?) robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk, then carries out a series of movements to perform the sanitisation.
 <center><img src="../media/fullArmMotion.png" width="500"/></center>
-
-### The Cleaner
 
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table, 
 disinfectant would be distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
@@ -59,17 +57,17 @@ Cleaning video:
 
 [![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
 
-The webots_ros2 package contains the TrajectoryFollower class that implements the 'follow_joint_trajectory' ROS2 action. Using this and examples in the package we were able to construct a simple controller for the arm. The controller takes a list of joint states, velocities, accelerations and time to complete the action.
+The webots_ros2 package contains the TrajectoryFollower class that implements the 'follow_joint_trajectory' ROS2 action. Using this we were able to construct a simple controller for the arm. The controller takes a list of joint states, velocities, accelerations and time to complete the action.
 
-The [ikpy](https://libraries.io/pypi/ikpy) python package was used to calculate inverse kinematics for the arm. We used it because it provides very useful utilities for kinematics of a robot arm which would have been time consuming and error-prone to implement ourselves. Two features were used from this package. The first is the ability to create a model of an arm from a given Unified Robot Description Format(URDF) file. In order to use this feature, we modified the URDF of the arm such that it included the squeegee on the end and passed that file to ikpy. The second feature is a function which uses the model to calculate the joint states of the arm needed to reach a given 3D point along with an orientation. These are then passed to the controller, along with some predefined velocities, accelerations and times.
+The [ikpy](https://libraries.io/pypi/ikpy) python package was used to calculate inverse kinematics for the arm. We used it because it provides very useful utilities for kinematics of a robot arm which would have been time consuming and error-prone to implement ourselves. Two features are used from this package. The first is the ability to create a model of an arm from a given Unified Robot Description Format(URDF) file. This feature allows us to adapt the software to work with any arm, given that a URDF file for it is at hand. The second feature is a function which uses the model to calculate the joint states of the arm needed to reach a given 3D point along with an orientation. These are then passed to the controller, along with some predefined velocities, accelerations and times.
 
 The software was created in a way such that the height of the cleaning motion as well as the limits of the waist movement is generalised. This means the arm cleaning motions can be adapted to any size table, given that the dimensions are suitable for the arm's reach.
 
 <center><img src="../media/swipe.png" width="500"/></center>
 
-A single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with **noOfPoints** parameter set to 10.
+The image above depicts a single swipe across the desk. End points and intermediary points are shown. This image represents a swipe with **noOfPoints** parameter set to 10.
 
-The cleaning motion consists of ‘swipes’. A swipe is defined as the act of the arm rubbing against the  table along the whole length in one direction. The swipe has a set start and end point, seen in Figure 1 below as the red dots. Several points are then generated in between the red dots, so the arm goes across the table while keeping it’s end effector against the surface the whole time. The number of these intermediary points (shown as the black dots in Figure 1) is generalised and can be changed as a parameter. In Figure 1 there are 10 points in total (meaning 8 intermediary points), which is how the robot is currently set up.
+The cleaning motion consists of ‘swipes’. A swipe is defined as the act of the arm rubbing against the  table along the whole length in one direction. The swipe has a set start and end point, seen in Figure 1 below as the red dots. Several points are then generated in between the red dots, so the arm goes across the table while keeping it’s end effector against the surface the whole time. The number of these intermediary points (shown as the black dots in the image above) is generalised and can be changed as a parameter. In Figure 1 there are 10 points in total (meaning 8 intermediary points), which is how the robot is currently set up.
 
 The joint angles are only computed for one swipe in practice. This essentially means the inverse kinematics only really have to work on a 2D plane, since the y value is constant. The joint angles that are calculated for this swipe are then re-used with different waist values in order to swipe across the whole surface. This minimises the number of inverse kinematics calculations that have to be performed.
 
@@ -78,7 +76,8 @@ Parameters of the arm software are as follows:
 - **noOfPoints** - this is the total number of points a swipe will have (including the red dots). As previously mentioned, we set this to 10 to get an accurate trajectory across the surface.
 - **Height** - this is the height at which the arm will perform the cleaning motion at. The height of the table can be plugged into this parameter and the arm will work with it.
 - **waistRange** - this is the range of values that the waist will take when carrying out the swipes. By default we have set the range as -1 to 1 radians, with 6 swipes equally spaced in that range. This range cleans the desk we have all the way, and 6 swipes ensures the squeegee makes contact with everywhere on the desk. See the Figure 2 for a visualisation of how the limits work.
-### The Mobile App:
+
+## The Mobile App:
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
 
 Workflow
@@ -102,13 +101,13 @@ Once the QR code is successfully scanned. The App will connect to the database a
 
 
 
-### The Database:
+## The Database:
 
 The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
 There will be a program running in the background that keep accessing the database. It checks if there is any table being timed out by comparing the current time with expiration time.
 
 
-### Navigation:
+## Navigation:
 
 <img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="500" />
 <img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 0px 0px;" width="500" />
@@ -130,7 +129,7 @@ As a team, we decided on <b>Method 1</b> as it allowed us to implement a more ge
 
 <center><img src="../media/navigation_decision.png" height="500"/></center>
 
-### Computer Vision
+## Computer Vision
 
 Clyde uses computer vision to perform two separate tasks. (preconditions before cleaning can be performed)
 
