@@ -11,6 +11,8 @@ description: "This is meta description"
 draft: false
 ---
 
+<center><img src="../media/labeledClyde.png" width="500" /></center>
+
 ### The full Cloud 9 cleaning system includes several parts:
 
 - An autonomous desk cleaning robot, named Clyde.
