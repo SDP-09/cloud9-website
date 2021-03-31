@@ -41,6 +41,8 @@ Especially useful is the webots_ros2_turtlebot package which provides an interfa
 
 ## The Arm
 
+---
+
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk (see the image processing section) and then carries out a series of movements to perform the sanitisation.
 
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table,
@@ -73,7 +75,9 @@ Parameters of the arm software are as follows:
 <center><img src="../media/fullArmMotion.png" width="500"/></center>
 <center>This image depicts the range within which the arm is capable of cleaning in.</center>
 
-## The Mobile App:
+## The Mobile App
+
+---
 
 <img src="../media/app.png" align="right" style="margin: 0px 0px 0px 0px;" width="150" />
 
@@ -98,12 +102,16 @@ Implementation
 4. Check-out page: On the check out page, the app will display the view from camera on the top half part of this page. The user need to put QR code inside this area.
    Once the QR code is successfully scanned. The App will connect to the database and update the state field with dirty, time field with Null. This finishes the check-out procedure.
 
-## The Database:
+## The Database
+
+---
 
 The booking database is built based on mysql. The database will store all the specific data on the desks, including location ,status (i.e. occupied, clean, dirty), usage timer and other desk attributes. It's one of the core parts of our cleaning system. Users will access the database by using the Clyde app and our robot will use mysql-python connector to get the target location and find the suitable path in using its navigation.
 There will be a program running in the background that keep accessing the database. It checks if there is any table being timed out by comparing the current time with expiration time.
 
-## Navigation:
+## Navigation
+
+---
 
 <img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="500" />
 <img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 0px 0px;" width="500" />
@@ -126,6 +134,8 @@ As a team, we decided on <b>Method 1</b> as it allowed us to implement a more ge
 <center><img src="../media/navigation_decision.png" height="500"/></center>
 
 ## Computer Vision
+
+---
 
 Clyde uses computer vision to perform two separate tasks. (preconditions before cleaning can be performed)
 
