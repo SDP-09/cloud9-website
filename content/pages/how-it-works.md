@@ -47,15 +47,13 @@ Especially useful is the webots_ros2_turtlebot package which provides an interfa
 
 ## The Arm
 
-[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
-
 Once positioned at the desired desk, the arm performs the cleaning motion itself. The current version of the robot uses the PincherX 100 robotic arm, which offers 5 degrees of freedom. The arm detects the surface of the desk (see the image processing section) and then carries out a series of movements to perform the sanitisation.
 
 The arm is capable of cleaning the desk by swiping the squeegee across the surface of the desk. In order to clean the table, 
 disinfectant is distributed to the sponge throughout the whole cleaning motion through low volumes by the pump.
 
 See embedded a video depicting the cleaning motion of the arm. In this video the arm does not have a squeegee on the end since soft body simulation is not feasable. In practice, the malleable sponge would make up for the fluctuations of motion:
-
+[![](http://img.youtube.com/vi/n0dsNzAbkx0/0.jpg)](http://www.youtube.com/watch?v=n0dsNzAbkx0)
 
 The webots_ros2 package contains the TrajectoryFollower class that implements the 'follow_joint_trajectory' ROS2 action. Using this we were able to construct a simple controller for the arm. The controller takes a list of joint states, velocities, accelerations and time to complete the action.
 
