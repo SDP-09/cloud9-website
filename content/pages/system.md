@@ -20,6 +20,25 @@ The current coronavirus pandemic has shown us just how important spaces such as 
 
 ---
 
+
+## Clyde Components
+
+<center><img src="../media/labeledClyde.png" width="300" /></center>
+
+1. Waffle Pi Turtlebot:   <br />
+This is the base and core of the robot, providing essential functionality like locomotion, and sensors. It is also home to a Raspberry Pi, ClyDe’s “brain”.  
+2. Pincher x100 Robot arm with cleaning tool:  <br />
+The Pincher x100 is a versatile arm. Through it the robot performs it’s essential cleaning function.  At the tip of the arm is our specially-designed cleaning tool, that takes in disinfectant that is pumped up via tubes on the arm.
+3. Battery:  <br />
+The Zeee 11.1V 8000maH Lipo Battery is high-capacity, and allows the robot to operate for several hours before needing to charge.
+4. Webcam:  <br />
+The C270 Logitech USB Webcam is powerful, yet lightweight enough to be carried on the robot arm. It provides high-resolution pictures that are suitable for QR-code recognition.
+5. Pump:  <br />
+The 6-12V R385 DC Diaphragm Pump is a lightweight, small, low-volume pump with a lifetime of up to 2500 hours. It is used to pump the robot’s disinfectant to the cleaning tool at the tip of the arm.
+6. Reservoir:  <br />
+This contains the disinfectant liquid. Attached on the inside is a non-contact liquid sensor to monitor disinfectant levels.
+
+
 ### **Surface Disinfecting**
 
 ClyDe's main function is to autonomously clean and disinfect desk surfaces. The main target environment for ClyDe to work in are libraries, however, he could also be set to work in office spaces if desired with no modification.

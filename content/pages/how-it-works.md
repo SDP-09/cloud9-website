@@ -34,24 +34,6 @@ Below are more in-depth descriptions of each sub-system.
 
 
 
-## Clyde Components
-
-<center><img src="../media/labeledClyde.png" width="300" /></center>
-
-1. Waffle Pi Turtlebot:   <br />
-This is the base and core of the robot, providing essential functionality like locomotion, and sensors. It is also home to a Raspberry Pi, ClyDe’s “brain”.  
-2. Pincher x100 Robot arm with cleaning tool:  <br />
-The Pincher x100 is a versatile arm. Through it the robot performs it’s essential cleaning function.  At the tip of the arm is our specially-designed cleaning tool, that takes in disinfectant that is pumped up via tubes on the arm.
-3. Battery:  <br />
-The Zeee 11.1V 8000maH Lipo Battery is high-capacity, and allows the robot to operate for several hours before needing to charge.
-4. Webcam:  <br />
-The C270 Logitech USB Webcam is powerful, yet lightweight enough to be carried on the robot arm. It provides high-resolution pictures that are suitable for QR-code recognition.
-5. Pump:  <br />
-The 6-12V R385 DC Diaphragm Pump is a lightweight, small, low-volume pump with a lifetime of up to 2500 hours. It is used to pump the robot’s disinfectant to the cleaning tool at the tip of the arm.
-6. Reservoir:  <br />
-This contains the disinfectant liquid. Attached on the inside is a non-contact liquid sensor to monitor disinfectant levels.
-
-
 ## ROS2
 The core software running on the robot is the Robot Operating System 2(ROS2). ROS2 is a collection of software libraries for developing robot systems, organised as packages. It is the successor to ROS, and aims to provide several updates to its predecessor to reflect the changes in robotics since it was made in 2007.
 ROS2 works by creating nodes that are responsible for certain functions in the system, like navigation and vision. It then provides several ways for the nodes to communicate and run in paralell, which is important when trying to integrate several subsystems of a robot. Especially vital are topics, which are communication channels that nodes can publish and subscribe to, that carry data of a specified type, like a number. In ClyDe we make use of many of these features. Below is a subset of all the nodes that are running when ClyDe is active.
