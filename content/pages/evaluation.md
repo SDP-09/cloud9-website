@@ -18,7 +18,7 @@ Overall, we are very satisfied with how the system functions, and would very muc
 
 ---
 
-A key feature of ClyDe is being able to navigate from one place to another in a quick, safe and reliable way. Of thesem safety and reliability are most important. Therefore we ran several tests to invesigate this, in one of our Webots test worlds. Below is a table with the results of a test investigating how often the navigation reaches its goal pose. The measurements are using the navigator's internal coordinate representation.
+A key feature of ClyDe is being able to navigate from one place to another in a quick, safe and reliable way. Of these safety and reliability are most important. Therefore we ran several tests to investigate this in one of our Webots test worlds. Below is a table with the results of a test investigating how often the navigation reaches its goal pose. The measurements are using the navigator's internal coordinate representation. The navigation was deemed to be a success if the robot is in an acceptable position to clean the table.
 
 | Table | Goal Pose            | Average Displacement  | Success |
 | ----- | -------------------- | --------------------- | ------- |
@@ -28,15 +28,15 @@ A key feature of ClyDe is being able to navigate from one place to another in a 
 | 4     | 0.3 -3.7 0.0 1.0     | 0.11 0.21             | 5/5     |
 | 5     | 0.3 -2.7 0.0 1.0     | 0.16 0.09             | 5/5     |
 | 6     | 1.8 -4.7 0.0 1.0     | 0.18 0.14             | 3/5     |
-| 7     | 1.8 -3.7 0.0 1.0     | 1.13 0.06             | 4/5     |
+| 7     | 1.8 -3.7 0.0 1.0     | 0.13 0.06             | 4/5     |
 | 8     | 1.8 -2.7 0.0 1.0     | 0.09 0.10             | 3/5     |
 
-As can be seen from the table, the navigator is quite accurate. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal. This means that the navigation parameters can be more fine-tuned and adapted to our purposes.
+As can be seen from the table, the navigator is quite accurate - reaching the table successfully 87.5% of the time. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal. This means that the navigation parameters can be more fine-tuned and adapted to our purposes.
 
 ## Obstruction Detection
 As ClyDe is currently not able to clean desks that have large obstructions on them, it is important that we have a reliable obstruction detection routine. Below is a table containing the results of tesing many possible variations that could impact the routine.
 
-| **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. color** | **Table color** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
+| **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. colour** | **Table colour** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
 | --------------------- | ----------------- | ------------ | ------------- | -------------- | --------------- | ----------------- | --------------------- | ----------- |
 | **Illumination**      |                   |              |               |                |                 |                   |                       |
 |                       | 0-20              | middle       | middle        | light          | brown           | None              | None                  | Success     |
@@ -54,7 +54,7 @@ As ClyDe is currently not able to clean desks that have large obstructions on th
 | **Obs. Colour**       |                   |              |               |                |                 |                   |                       |
 |                       | 40-60             | middle       | middle        | brown          | brown           | None              | None                  | Success     |
 |                       | 40-60             | middle       | middle        | black          | black           | None              | None                  | Fail        |
-| **Table color**       |                   |              |               |                |                 |                   |                       |
+| **Table colour**      |                   |              |               |                |                 |                   |                       |
 |                       | 40-60             | middle       | middle        | brown          | dark            | None              | None                  | Success     |
 | **Reflected light**   |                   |              |               |                |                 |                   |                       |
 |                       | 40-60             | middle       | middle        | green          | brown           | Yes               | None                  | Success     |
