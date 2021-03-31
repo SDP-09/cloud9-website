@@ -109,6 +109,18 @@ Since we were not able to create a physical robot, there are naturally going to 
 
 
 ### Ethics
-Our team met with an ethics expert, and we TODO
+Our team met with an ethics expert, and we wanted to ensure that the ethics we planned for at the beginning of the project held up. There are several occasions where ethical issues could arise. However, we will prevent any personal data being abused from our system!
+
+As our robot operates around people and has a camera on it, this obviously raises privacy concerns to them. But don't worry! We will take a series of measures to address the concerns!
+
+* Follow all GDPR rules to maximise privacy.
+* Have a clear privacy policy in the app. This includes: We will not implement any login system to store any personal information of the app users
+* Add a light to the camera that lights up when the camera is active.
+* Process all images locally on the robot and delete them immediately. Besides the camera will only stay open when it is trying to scan the qr code and the scope of its sight will be very limited.
+* Design Clyde’s exterior to make it friendlier and be informative of its purpose.
+
+We understand that you don't want to be distracted when you are doing your work! We 
+
+
 Your library can print out the following poster to let visitors know about ClyDe:
 <center><img src="../media/clyde-poster-1.png" height="700"/></center>
