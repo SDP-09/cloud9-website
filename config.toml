@@ -102,16 +102,16 @@ URL = "group-9-demo4-report.pdf"
 
 # Column 3 - videos
 [[menu.videos]]
-name = "Link"
-URL = "#"
+name = "Demo 1"
+URL = "https://youtu.be/C1nfwrSur-Y"
 
 [[menu.videos]]
-name = "Link"
-URL = "#"
+name = "Demo 2"
+URL = "https://youtu.be/-emXn9kMr4E"
 
 [[menu.videos]]
-name = "Link"
-URL = "#"
+name = "Demo 3"
+URL = "https://youtu.be/dumd6zy7yjI"
 
 #################### default parameters ################################
 [params]
