@@ -16,6 +16,9 @@ Overall, we are very satisfied with how the system functions, and would very muc
 
 
 ## Navigation
+
+---
+
 A key feature of ClyDe is being able to navigate from one place to another in a quick, safe and reliable way. Of thesem safety and reliability are most important. Therefore we ran several tests to invesigate this, in one of our Webots test worlds. Below is a table with the results of a test investigating how often the navigation reaches its goal pose. The measurements are using the navigator's internal coordinate representation.
 
 | Table | Goal Pose            | Mean Achieved Pose    | Success |
@@ -32,6 +35,9 @@ A key feature of ClyDe is being able to navigate from one place to another in a 
 As can be seen from the table, the navigator is quite accurate. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal. This means that the navigation parameters can be more fine-tuned and adapted to our purposes.
 
 ## Obstruction Detection
+
+---
+
 As ClyDe is currently not able to clean desks that have large obstructions on them, it is important that we have a reliable obstruction detection routine. Below is a table containing the results of tesing many possible variations that could impact the routine. 
 
 | **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. color** | **Table color** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
@@ -61,7 +67,11 @@ As ClyDe is currently not able to clean desks that have large obstructions on th
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
 As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. Still, this means that in the future we could take more time to fine-tune the algorithm's parameters to achieve even better results. ClyDe could also be equipped with a small torch in future versions to help standardize lighting conditions.
+
 ## QR Code detection
+
+---
+
 ClyDe relies on QR codes attached to tables to confirm it's location and update the statuses of tables in the database. Therefore it is important that the QR code detection is reliable. Below is a table where a camera was held at several different angles and distances, to determine in what conditions QR codes could be detected. 
 
 | Angle/degree | Distance/cm    | Detected |
@@ -84,6 +94,8 @@ As can be seen from this table, QR detection is quite reliant on angle and dista
 
 # Shortcomings and Attempted Solutions
 
+---
+
 ### Problem: Instability and documentation issues.
 Getting ROS2 to work on everyone’s systems proved to be a setback. Identical installations on new Virtual Machines even produced different errors. At the end of the project this is causing errors for some team members. Parts of our issues stem from there being little documentation on ROS2 as a whole, but also on Webots and how the two interact. We believe this issue will have to be rectified before ROS2 and its Webots integration can be considered accessible to beginners. 
 
@@ -94,22 +106,30 @@ In hindsight, we believe we would have preferred to go with Gazebo over Webots a
 ### Problem: Navigator being unreliable.
 A large blocker for the navigation team was the fact that the navigator packages seem to be inherently unreliable. Much like ROS2 as a whole, it seemed to be more stable on some systems than others.  This contributed to the issues with integrating the robot arm, as investigating them were made difficult. 
 Attempted Solution: The team investigated in to the source code of the navigator and tried to reinstall to no avail.
+
 ### Problem: Inability to perform some important qualitative analysis.
 There are aspects of the robot that we were not able to test since we were not working with a physical product. An example of this is the cleaning motion of the robot. While we know it is feasible for a robot arm to carry out the motions to properly disinfect a surface according to UK Government guidelines, we were not able to test if the way we programmed the arm nor the cleaning utensil we used is adequate. There is nothing we can do about this, however it is true that the arm and cleaning motion is something that can easily be modified for future versions of ClyDe and would not require a complete overhaul as to render the project unusable.
 
 # Future Direction of ClyDe
 
+---
+
 ### Scaled up version.
 Currently, we are using the Robot is Waffle Pi as the base for ClyDe. In reality, another base would have to be used since the Waffle Pi is too short to house an arm that could reach on top of a table. This base could be custom built (ie. 3D Printed) since it would not have to carry particularly heavy loads.
+
 ### More user friendly App.
 Our app works, however it is not as feature complete as we would have liked it to be for the full product. Given time, it would be simple to implement many important features that would improve user experience, such as:  Text-to-Speech for the visually impaired, ensuring existing screen-readers work, colourblind settings and ensuring font readability. While explicitly made for the Web, the Web Content Accessibility Guidelines(WCAG) 2.1 will be a useful referencefor achieving accessibility for a mobile app as well. (W3C,2018)
+
 ### Web-app for staff to interface with ClyDe.
 As it stands, to start and stop ClyDe, the staff would have to use the ClyDe Controller which is the Raspberry Pi wesend out with the robot. While we might not be able to completely get rid of the Pi since it runs the navigation package, we could introduce a web-app (or an addition to the current app) which could allow the staff to start and stop ClyDe as well as add desks individually from their computer or phone. This would eliminate the need to interact with the Pi, and means it just needs to be left running to operate the navigator. We believe this feature would be straight-forward to implement since we already have the framework set up through the database for the booking system. Additionally ROS2 has packages to interact with the Web.
+
 ### General Hardware improvements.
 Since we were not able to create a physical robot, there are naturally going to be some flaws in our design that will come to light once it is actually built.  We estimate that these kind of issues will not require a complete overhaul of the design, and so this point should not be much of an issue, particularly considering that our design is a prototype.
 
-
 # Ethics
+
+---
+
 Our team met with an ethics expert, and we wanted to ensure that the ethics we planned for at the beginning of the project held up. There are several occasions where ethical issues could arise. However, we will prevent any personal data being abused from our system!
 
 As our robot operates around people and has a camera on it, this obviously raises privacy concerns to them. But don't worry! We will take a series of measures to address the concerns!
