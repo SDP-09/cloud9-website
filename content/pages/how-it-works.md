@@ -93,6 +93,12 @@ The navigation sub-system employs Clyde’s 360° LIDAR unit to see his environm
 
 Most important Navigation decision: 
 
+Navigation must relyon a precomputed floor plan. This would either be created manually, or by using SLAM (Simultaneous localization and mapping). SLAM is creating or updating a map of an unknown environment while simultaneously keeping track of the robot’s location within it. After speaking with the expert Christopher McGreavy, we investigated two suggested methods for navigation: 
+- Method  1: using  SLAM  for  real-time  map-building and obstacle avoidance. 
+- Method 2:  manually ‘pre-draw’ the map and use naiveobstacle avoidance which involves 3 actions:  Turn left,turn right, or move backwards.
+
+As a team, we decided on <b>Method 1</b> as it allowed us to implement a more general solution. The desk coordinate smust be hard-coded,  due to the difficulty of identifying tables on the map from LIDAR  data, which is not a problem as we already need to drive the robot around for mapping the room and can store coordinates in front of tables. With this, we can create a map of any environment. However in the case of failure we were prepared to switch to method 2 for a more basic solution.
+
 ![image](../media/navigation_decision.png)
 
 ### Computer Vision
