@@ -77,6 +77,14 @@ draft: false
     </div>
 </div>
 
+<div class="team-member">
+    <img src="../media/team-images/sean.png" class="member-image">
+    <div class="member-description">
+        <p class="member-name">Sean</p>
+        <p class="member-role">Navigation Guy</p>
+    </div>
+</div>
+
 <!-- Add yourself here -->
 
 ## Our Gantt Chart
