@@ -11,7 +11,8 @@ description: "This is meta description"
 draft: false
 ---
 
-ClyDe contains several subsystems (described in the "System" and "How it works" sections). Each of these have been thoroughly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Having confirmed the reliability and functionality of each subsystem, we could more easily integrate these and resolve any errors. The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. 
+ClyDe contains several subsystems (described in the "System" and "How it works" sections). Each of these have been thoroughly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Having confirmed the reliability and functionality of each subsystem, we could more easily integrate these and resolve any errors. The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. In a physical system, we would have dedicated significant time to detailed testing of excatly how well ClyDe cleans, however this was not possible in Webots. Still, after reseraching government guidelines and demonstrating hardware components with technicians we are confident ClyDe would do this in a safe and effective manner.
+Overall, we are very satisfied with how the system functions, and would very much like to implement ClyDe physically.
 
 
 ## Navigation
@@ -28,7 +29,7 @@ A key feature of ClyDe is being able to navigate from one place to another in a 
 | 7     | 1.8 -3.7 0.0 1.0     | 1.64 -3.58 -0.03 1.06 | 4/5     |
 | 8     | 1.8 -2.7 0.0 1.0     | 1.73 -2.64 0.05 0.91  | 3/5     |
 
-As can be seen from the table, the navigator is quite reliable. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal.
+As can be seen from the table, the navigator is quite accurate. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal. This means that the navigation parameters can be more fine-tuned and adapted to our purposes.
 
 ## Obstruction Detection
 As ClyDe is currently not able to clean desks that have large obstructions on them, it is important that we have a reliable obstruction detection routine. Below is a table containing the results of tesing many possible variations that could impact the routine. 
@@ -59,9 +60,9 @@ As ClyDe is currently not able to clean desks that have large obstructions on th
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | low                   | Success     |
 |                       | 40-60             | middle       | middle        | green          | brown           | None              | high                  | Fail        |
 
-As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. 
+As can be seen from the table, the obstruction detection is reliable in most circumstances. However, obstrictions that are coloured black, or a large amount of shadow on the table seems to interfere with it. This is not unexpected, as lighting conditons are known to affect computer vision algortihms in various ways. Still, this means that in the future we could take more time to fine-tune the algorithm's parameters to achieve even better results. ClyDe could also be equipped with a small torch in future versions to help standardize lighting conditions.
 ## QR Code detection
-ClyDe relies on QR codes attached to tables to confirm it's location and update the statuses of tables in the database. Therefore it is important that the QR code detection is reliable. Below is a table where a camera was held at several different angles and distances, to determine in what conditions QR codes could be detected. This was later used to inform decisions on how to angle the arm to best detect the QR codes. 
+ClyDe relies on QR codes attached to tables to confirm it's location and update the statuses of tables in the database. Therefore it is important that the QR code detection is reliable. Below is a table where a camera was held at several different angles and distances, to determine in what conditions QR codes could be detected. 
 
 | Angle/degree | Distance/cm    | Detected |
 | ------------ | -------------- | -------- |
@@ -79,12 +80,12 @@ ClyDe relies on QR codes attached to tables to confirm it's location and update 
 | 60           | 15             | yes      |
 
 
-As can be seen from this table, QR detection is quite reliant on angle and distance. The routine fonctions best when at a steep angle(looking at the code from above), and is close to the code. 
+As can be seen from this table, QR detection is quite reliant on angle and distance. The routine fonctions best when at a steep angle(looking at the code from above), and is close to the code. This data was later used to inform decisions on how to angle the arm to best detect the QR codes. 
 
 # Shortcomings and Attempted Solutions
 
 ### Problem: Instability and documentation issues.
-Getting ROS2 to work on everyone’s systems proved to bea setback. Identical installations on new Virtual Machines produced different errors.  Even at the end of the project this is causing errors for some team members. Parts of our issues stem from there being little documentation on ROS2 as a whole, but also on Webots and how the two interact. We believe this issue will have to be rectified before ROS2 and its Webots integration can be considered accessible to beginners. 
+Getting ROS2 to work on everyone’s systems proved to be a setback. Identical installations on new Virtual Machines even produced different errors. At the end of the project this is causing errors for some team members. Parts of our issues stem from there being little documentation on ROS2 as a whole, but also on Webots and how the two interact. We believe this issue will have to be rectified before ROS2 and its Webots integration can be considered accessible to beginners. 
 
 Unfortunately, this was inevitable due to the necessity of simulating the robot and so there were no direct solutions to this. We did however have an error channel on our Discord server to efficiently help anyone who was having compatibility issues, and this helped us solve many. 
 
