@@ -11,7 +11,7 @@ description: "This is meta description"
 draft: false
 ---
 
-ClyDe contains several subsystems (described in the "System" and "How it works" sections). Each of these have been thoroughly tested, as we had to ensure they were functioning correctly before trying to inegrate them together. Having confirmed the reliability and functionality of each subsystem, we could more easily integrate these and resolve any errors. The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. In a physical system, we would have dedicated significant time to detailed testing of excatly how well ClyDe cleans, however this was not possible in Webots. Still, after reseraching government guidelines and demonstrating hardware components with technicians we are confident ClyDe would do this in a safe and effective manner.
+ClyDe contains several subsystems (described in the "System" and "How it works" sections). Each of these have been thoroughly tested, as we had to ensure they were functioning correctly before trying to integrate them together. Having confirmed the reliability and functionality of each subsystem, we could more easily integrate these and resolve any errors. The three subsystems we have focused the most on are navigation, obstruction detection and QR code detection. In a physical system, we would have dedicated significant time to detailed testing of exactly how well ClyDe cleans, however this was not possible in Webots. Still, after researching government guidelines and demonstrating hardware components with technicians we are confident ClyDe would do this in a safe and effective manner.
 Overall, we are very satisfied with how the system functions, and would very much like to implement ClyDe physically.
 
 ## Navigation
@@ -20,23 +20,20 @@ Overall, we are very satisfied with how the system functions, and would very muc
 
 A key feature of ClyDe is being able to navigate from one place to another in a quick, safe and reliable way. Of thesem safety and reliability are most important. Therefore we ran several tests to invesigate this, in one of our Webots test worlds. Below is a table with the results of a test investigating how often the navigation reaches its goal pose. The measurements are using the navigator's internal coordinate representation.
 
-| Table | Goal Pose            | Mean Achieved Pose    | Success |
+| Table | Goal Pose            | Average Displacement  | Success |
 | ----- | -------------------- | --------------------- | ------- |
-| 1     | 0.35 0.90 0.70 0.70  | 0.46 0.99 0.80 0.61   | 5/5     |
-| 2     | -1.20 0.50 0.70 0.70 | -1.33 0.53 0.50 0.87  | 4/5     |
-| 3     | 0.3 -4.7 0.0 1.0     | 0.24 -4.5 5 0.10 0.96 | 4/5     |
-| 4     | 0.3 -3.7 0.0 1.0     | 0.23 -3.62 0.21 0.95  | 5/5     |
-| 5     | 0.3 -2.7 0.0 1.0     | 0.18 -2.81 0.09 0.99  | 5/5     |
-| 6     | 1.8 -4.7 0.0 1.0     | 1.77 -4.88 -0.09 1.11 | 3/5     |
-| 7     | 1.8 -3.7 0.0 1.0     | 1.64 -3.58 -0.03 1.06 | 4/5     |
-| 8     | 1.8 -2.7 0.0 1.0     | 1.73 -2.64 0.05 0.91  | 3/5     |
+| 1     | 0.35 0.90 0.70 0.70  | 0.14 0.143            | 5/5     |
+| 2     | -1.20 0.50 0.70 0.70 | 0.13  0.64            | 4/5     |
+| 3     | 0.3 -4.7 0.0 1.0     | 0.21  0.11            | 4/5     |
+| 4     | 0.3 -3.7 0.0 1.0     | 0.11 0.21             | 5/5     |
+| 5     | 0.3 -2.7 0.0 1.0     | 0.16 0.09             | 5/5     |
+| 6     | 1.8 -4.7 0.0 1.0     | 0.18 0.14             | 3/5     |
+| 7     | 1.8 -3.7 0.0 1.0     | 1.13 0.06             | 4/5     |
+| 8     | 1.8 -2.7 0.0 1.0     | 0.09 0.10             | 3/5     |
 
 As can be seen from the table, the navigator is quite accurate. However, sometimes the robots gets stuck on an obstacle, and does not manage to reach its goal. This means that the navigation parameters can be more fine-tuned and adapted to our purposes.
 
 ## Obstruction Detection
-
----
-
 As ClyDe is currently not able to clean desks that have large obstructions on them, it is important that we have a reliable obstruction detection routine. Below is a table containing the results of tesing many possible variations that could impact the routine.
 
 | **Attr. to change ↓** | **Brightness/cd** | **Obs. pos** | **Obs. size** | **Obs. color** | **Table color** | **Reflect light** | **Shadow (Gradient)** | **Outcome** |
