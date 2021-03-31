@@ -70,33 +70,37 @@ name = "Why Choose ClyDe"
 URL = "why-choose-clyde"
 weight = 6
 
-# company 
+# Column 1 - more
 [[menu.more]]
-name = "Link"
-URL = "#"
-
-[[menu.more]]
-name = "Link"
-URL = "#"
+name = "User guide"
+URL = "/group-9-user-guide.pdf"
 
 [[menu.more]]
-name = "Link"
-URL = "#"
+name = "Project plan"
+URL = "/group-9-project-plan.pdf"
 
-# Product 
+#[[menu.more]]
+#name = "Link"
+#URL = "#"
+
+# Column 2 - reports
 [[menu.reports]]
-name = "Link"
-URL = "#"
+name = "Demo 1"
+URL = "group-9-demo1-report.pdf"
 
 [[menu.reports]]
-name = "Link"
-URL = "#"
+name = "Demo 2"
+URL = "group-9-demo2-report.pdf"
 
 [[menu.reports]]
-name = "Link"
-URL = "#"
+name = "Demo 3"
+URL = "group-9-demo3-report.pdf"
 
-# Support 
+[[menu.reports]]
+name = "Demo 4"
+URL = "group-9-demo4-report.pdf"
+
+# Column 3 - videos
 [[menu.videos]]
 name = "Link"
 URL = "#"
@@ -120,7 +124,7 @@ author = "Themefisher"
 contact_form_action = "#" # contact form works with https://formspree.io
 
 ########### footer content ##########
-footer_content = "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur."
+footer_content = ""
 # copyright
 copyright = "Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)"
 
