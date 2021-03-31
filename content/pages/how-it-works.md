@@ -19,7 +19,7 @@ draft: false
 - A database that holds the locations of all tables, their sizes and colours.
 - An arm that is attached to ClyDe that cleans the desk.
 - An accompanying app that facilitates desk booking.
-- A Raspberry Pi comtroller computer.
+- A Raspberry Pi controller computer.
 
 These parts come together to make an autonomous sanitising system for desk tops and other flat surfaces in spaces such as libraries.
 
