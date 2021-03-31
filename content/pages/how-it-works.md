@@ -116,7 +116,8 @@ After the first step is checked, the robot will use a picture of the whole table
 ![image](../media/CannyEdge3.png)
 
 Once the cleaning is done, the robot will connect to the database and update the table’s status to “free”.
-![image](../media/illu3.jpg)
+<center><img src="../media/illu3.jpg" height="300"/></center>
+
 
 ### The Arm
 
