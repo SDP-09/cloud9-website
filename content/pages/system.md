@@ -70,6 +70,10 @@ The second feature is to again scan the QR code, but this time once they have fi
 
 It is possible in the future to integrate the app with the booking system that a library might already have in place - for instance SeatEd which is used at Edinburgh University's Main Library - allowing for a more smooth user experience.
 
+## How does this system come into contact with staff?
+
+---
+
 ### **ClyDe Controller**
 
 This serves as a controller for staff to interact will ClyDe in various ways, such as telling him to start patrolling as well as to come back home.
