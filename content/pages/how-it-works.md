@@ -106,7 +106,7 @@ There will be a program running in the background that keep accessing the databa
 ### Navigation:
 
 <img src="../media/test_world_OGM.png" align="left" style="margin: 0px 0px 0px 0px;" width="500" />
-<img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 80px 0px;" width="500" />
+<img src="../media/RVIZ.PNG" align="right" style="margin: 0px 0px 0px 0px;" width="500" />
 
 - Before Clyde is able to work on his own in a library or office, he uses a method called Simultaneous Localisation and Mapping (SLAM) to generate a detailed Occupancy Grid Map of its environment using LIDAR, which can then be used later for pathfinding. A qualified technician performs this mapping on set-up by driving Clyde around the environment manually.  The animation … shows an example of the mapping in action.
 
