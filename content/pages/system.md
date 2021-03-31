@@ -66,7 +66,7 @@ The controller displays information about ClyDe's status. This includes:
 
 See the image below for a demonstration of the UI:
 
-![](../media/controller_ui.png)
+<center><img src="../media/controller_ui.png" width="700" /></center>
 
 The controller can also be used to give instructions to ClyDe. These instructions are kept simple in order to keep ease of use high. The instructions include:
 - Start cleaning - this sets ClyDe off to begin patrolling and cleaning any desks that are marked as dirty.
