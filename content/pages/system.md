@@ -38,7 +38,7 @@ ClyDe is easy to work with and maintain, all that is required after deployment i
 
 The main way users interact with ClyDe is through our ClyDe Companion app.
 
-<center><img src="../media/app_home.png" height="500"/></center>
+<img src="../media/app_home.png" align="right" style="margin: 0px 0px 0px 0px;" width="150"/>
 
 
 #### Features
