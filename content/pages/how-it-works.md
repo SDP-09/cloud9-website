@@ -150,7 +150,7 @@ Before any cleaning is performed, ClyDe will keep adjusting the angle of the cam
 
 <center><img src="../media/evaluation/6015.png" width="500"/></center>
 
-1. Detecting obstruction on desk.
+2. Detecting obstruction on desk.
    After the first step is checked, the robot will use a picture of the whole table and perform an obstruction detection algorithm on it. For obstruction detection, ClyDe chooses OTSU algorithm thresholds any obstruction into black and thresholds the table into white and it is invariant to different lightning conditions, brightness...etc. This ensures the desk is empty before any cleaning is performed.
 
 <center><img src="../media/CannyEdge3.png" width="527"/></center>
